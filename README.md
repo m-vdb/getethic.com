@@ -1,2 +1,2 @@
 # getethic.com
-The anding page of Ethic.
+The landing page of Ethic.
