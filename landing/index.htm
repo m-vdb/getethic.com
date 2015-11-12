@@ -1,0 +1,108 @@
+<!doctype html>
+<!--[if lt IE 7 ]>	<html lang="fr" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>		<html lang="fr" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>		<html lang="fr" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>		<html lang="fr" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="fr" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Ethic</title>
+	
+	<meta name="description" content="Mutual Coverage, the new way." />
+	<meta name="author" content="Ethic" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, height=device-height">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="og:title" content="Ethic | Mutual Coverage" />
+	<meta name="og:description" content="Mutual Coverage, the new way." />
+	<meta name="og:type" content="website" />
+	<meta name="og:url" content="http://getethic.com" />
+	<meta name="og:image" content="img/ios/og-image.jpg" />
+	<meta name="msapplication-TileImage" content="img/ios/ms-144x144.png"/>
+	<meta name="msapplication-TileColor" content="#49c5df"/>
+	
+	<link rel="icon" type="image/png" href="img/ios/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/ios/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="img/ios/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="img/ios/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="img/ios/favicon-16x16.png" sizes="16x16">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/ios/ios-57x57.png" />
+	<link rel="apple-touch-icon" sizes="60x60" href="img/ios/ios-60x60.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="img/ios/ios-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="img/ios/ios-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="img/ios/ios-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="img/ios/ios-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="img/ios/ios-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="img/ios/ios-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="img/ios/ios-180x180.png" />
+	<link rel="apple-touch-startup-image" href="img/ios/ios-320x460.png" />
+
+	<link rel="stylesheet" href="css/normalize.css" /> 
+	<link rel="stylesheet" href="css/screen.css" /> 
+	<script src="js/libs/modernizr.min.js"></script>
+
+
+</head>
+<body class="home-page">
+
+	<!-- page -->
+	<div class="page">
+
+		<!-- heading -->
+		<div class="heading">
+			<div class="header" role="banner">
+				<div class="wrapper">
+					<div class="row">
+						<a class="logo" href="index.htm" title="Ethic"><strong>Ethic</strong></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- / page heading -->
+
+		<!-- hero -->
+		<div class="hero">
+			<div class="wrapper">
+				<div class="row">
+					Lorem Ipsum
+				</div>
+			</div>
+		</div>
+		<!-- / hero -->
+
+		
+
+		<!-- footer -->
+		<div class="footer">
+			<div class="wrapper">
+				<div class="row">
+					<div class="footer-copyright">
+						<p>Copyright &copy; 2015</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- / footer -->
+
+	</div>
+	<!-- / page -->
+	
+	<script src="js/libs/jquery.min.js"></script>
+	<script src="js/libs/require.min.js"></script>
+	<script>
+	(function() {
+		var config = {
+		  baseUrl: 'js/',
+		  urlArgs: 'bust=' +  (new Date()).getTime()
+		};
+		define('config', config);
+		define('jquery', function() {return jQuery});
+		require.config(config);
+		require(['main']);
+	})();
+	</script>
+
+</body>
+</html>

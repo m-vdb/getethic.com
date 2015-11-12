@@ -1,0 +1,24 @@
+// Join multiple media query fragments with separator
+// ie: combine-mq("screen", "max-width(200px)")
+@function join-mq($media-queries...) {
+	$result: "";
+	$i: 0;
+	@each $media-query in $media-queries {
+		@if $media-query {
+			@if $i > 0 {
+				$result: $result + " and ";
+			}
+			$i: $i + 1;
+			$result: $result + $media-query;
+		}
+	}
+	@return $result;
+}
+
+// Generate simple$mobile-min-width
+@function simple-mq($property: 'min-width', $value: false) {
+	@if $value {
+		@return "(" + $property + ": " + $value + ")";
+	}
+	@return false;
+}
