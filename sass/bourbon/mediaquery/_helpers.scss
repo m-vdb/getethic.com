@@ -1,0 +1,18 @@
+%hidden-for-print {					@include for-print {				display: none !important;	}	}
+%hidden-for-hidpi {					@include for-hidpi {				display: none !important;	}	}
+%hidden-for-mobile-only {			@include for-mobile-only {			display: none !important;	}	}
+%hidden-for-tablet-only {			@include for-tablet-only {			display: none !important;	}	}
+%hidden-for-tablet-and-up {			@include for-tablet-and-up {		display: none !important;	}	}
+%hidden-for-desktop-only {			@include for-desktop-only {			display: none !important;	}	}
+%hidden-for-desktop-and-up {		@include for-desktop-and-up {		display: none !important;	}	}
+%hidden-for-large-desktop {			@include for-large-desktop-only {		display: none !important;	}	}
+
+// Please avoid those ones in favor of the %hidden-for-xxx versions when possible
+%visible-for-print {					display: none !important; @include for-print {				display: inherit !important; .ie7 & { display:block !important; }	}	}
+%visible-for-hidpi {					display: none !important; @include for-hidpi {				display: inherit !important; .ie7 & { display:block !important; }	}	}
+%visible-for-mobile-only {				display: none !important; @include for-mobile-only {		display: inherit !important; .ie7 & { display:block !important; }	}	}
+%visible-for-tablet-only {				display: none !important; @include for-tablet-only {		display: inherit !important; .ie7 & { display:block !important; }	}	}
+%visible-for-tablet-and-up {			display: none !important; @include for-tablet-and-up {		display: inherit !important; .ie7 & { display:block !important; }	}	}
+%visible-for-desktop-only {				display: none !important; @include for-desktop-only {		display: inherit !important; .ie7 & { display:block !important; }	}	}
+%visible-for-desktop-and-up {			display: none !important; @include for-desktop-and-up {		display: inherit !important; .ie7 & { display:block !important; }	}	}
+%visible-for-large-desktop {			display: none !important; @include for-large-desktop-only {	display: inherit !important; .ie7 & { display:block !important; }	}	}

@@ -1,0 +1,11 @@
+@import "compass/css3";
+@import "bourbon/bourbon";
+@import "ethic/variables";
+@import "ethic/base";
+
+body {
+	@extend %body;
+}
+ul, ol {
+	margin: 0;
+}
