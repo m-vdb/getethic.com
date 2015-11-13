@@ -1,0 +1,11 @@
+{
+  "name": "getethic.com",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-compass": "^2.1.0"
+  },
+  "engines": {
+    "node": "~4.2.1"
+  }
+}
