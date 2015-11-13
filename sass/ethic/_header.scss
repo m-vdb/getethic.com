@@ -1,0 +1,30 @@
+.header {
+	z-index:4;
+	position:relative;
+	display:block;
+	background-color:$white;
+	height:100px;
+	width: 100%;
+
+	.logo {
+		z-index: 1;
+		position:absolute;
+		top: 30px;
+		left:15px;
+		width:258px;
+
+		@include for-tablet-only {
+			left:50%;
+			margin-left:-(258px/2);
+		}
+
+		@include for-desktop-and-up {
+			left:0;
+		}
+
+		strong {
+			display:block;
+			@include hide-text;
+		}
+	}
+}

@@ -1,0 +1,107 @@
+// |       Content Top        |
+// | Content | First | Second |
+// |      Content Bottom      |
+
+@include for-mobile-and-up {
+	@include new-grid(
+		$name: 'mobile-layout',
+		$columns: 12,
+		$gutter-width: 2%,
+		$fit: true
+	);
+
+	.page-row {
+		@extend %mobile-layout-grid;
+	}
+
+	.page-quick-access {
+		@extend %mobile-layout-cell-2;
+	}
+
+}
+
+@include for-tablet-and-up {
+	@include new-grid(
+		$name: 'tablet-layout',
+		$columns: 12,
+		$gutter-width: 2%,
+		$fit: true
+	);
+
+	.page-row {
+		@extend %tablet-layout-grid;
+	}
+
+	.page-quick-access {
+		@extend %tablet-layout-cell-2;
+	}
+
+	.page-solution {
+		@extend %tablet-layout-cell-3;
+	}
+
+	.page-atelier,
+	.page-info {
+		@extend %tablet-layout-cell-4;
+	}
+
+	.page-content-video,
+	.page-content-picture {
+		@extend %tablet-layout-cell-5;
+	}
+
+	.page-content {
+		@extend %tablet-layout-cell-7;
+	}
+
+	.page-info-map {
+		@extend %tablet-layout-cell-8;
+	}
+}
+
+@include for-desktop-and-up {
+	@include new-grid(
+		$name: 'desktop-layout',
+		$columns: 12,
+		$gutter-width: 2%,
+		$fit: true
+	);
+
+	.page-row {
+		@extend %desktop-layout-grid;
+	}
+
+	.page-solution,
+	.page-quick-access,
+	.page-info {
+		@extend %desktop-layout-cell-3;
+	}
+
+	.page-atelier {
+		@extend %desktop-layout-cell-4;
+	}
+
+	.page-content-video,
+	.page-content-picture {
+		@extend %desktop-layout-cell-5;
+	}
+
+	.page-content {
+		@extend %desktop-layout-cell-7;
+	}
+
+	.page-info-map {
+		@extend %desktop-layout-cell-9;
+	}
+}
+
+/*
+@include for-desktop-only {
+	.l-content { 
+		.ie7 & { 
+			width:513px !important;
+			// normally 515px, but 513px for IE7
+		}
+	}
+}
+*/
