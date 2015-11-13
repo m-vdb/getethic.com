@@ -1,5 +1,10 @@
 @import "compass/css3";
-@import "bourbon/bourbon";
+@import "bourbon";
+@import "mediaquery/functions";
+@import "mediaquery/variables";
+@import "mediaquery/mixins";
+@import "mediaquery/helpers";
+@import "mediaquery/grid";
 @import "ethic/variables";
 @import "ethic/base";
 
