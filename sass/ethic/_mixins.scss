@@ -1,8 +1,0 @@
-// @function em($px, $base: $base-font-size) {
-//     @return ($px / $base) * 1em;
-// }
-
-@mixin ie7-inline-block() {
-  *display: inline; /* IE7 inline-block hack */
-  *zoom: 1;
-}
