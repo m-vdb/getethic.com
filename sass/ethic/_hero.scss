@@ -26,8 +26,14 @@
 			@include for-desktop-and-up {
 				&:hover {
 					.arrow {
-						margin-right: -100px;
-						@include opacity(0);
+						@include animation(move-right 1s infinite);
+						
+						@include keyframes(move-right) {
+						  0% { opacity: 1; left: 230px; }
+						  25% { opacity: 0; left: 260px; }
+						  50% { opacity: 0; left: 200px; }
+							100% { opacity: 1; left: 230px; }
+						}
 					}
 				}
 			}

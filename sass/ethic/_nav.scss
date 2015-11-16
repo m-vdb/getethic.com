@@ -7,8 +7,14 @@
 	
 	@include for-desktop-and-up {
 		&:hover {
-			small {
-				margin: -3px 0;
+			.line {
+				@include animation('move 1s infinite');
+				
+				@include keyframes(move) {
+				  0% { width:50%; }
+					50% { width:100%; }
+					100% { width:50%; }
+				}
 			}
 		}
 	}

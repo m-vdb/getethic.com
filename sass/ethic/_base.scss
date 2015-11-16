@@ -8,7 +8,7 @@
 	padding:0 !important;
 	min-width:320px;
 	
-	// @include font-smoothing(antialiased);
+	@include font-smoothing;
 }
 
 a {
@@ -51,6 +51,8 @@ b {
 p {
 	text-align: center;
 	line-height: 25px;
+	
+	@include word-wrap;
 }
 
 .page {
@@ -79,8 +81,7 @@ p {
 
 }
 
-@import "mixins",
-				"grid";
+@import "grid";
 
 @import "header",
 				"hero",
