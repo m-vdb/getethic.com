@@ -1,0 +1,32 @@
+.menu {
+	position: fixed;
+	z-index: 6;
+	text-align: center;
+	top: 30px;
+	right: 30px;
+	
+	@include for-desktop-and-up {
+		&:hover {
+			small {
+				margin: -3px 0;
+			}
+		}
+	}
+}
+
+.line {
+	width: 35px;
+}
+
+.line01,
+.line02,
+.line03 {
+	display: block;
+	background-color: $white;
+	margin: 4px;
+	height: 1px;
+}
+
+@include for-tablet-and-up {
+	padding: 10px;
+}

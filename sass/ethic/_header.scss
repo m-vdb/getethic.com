@@ -1,8 +1,12 @@
+.heading {
+	z-index: 999;
+	position: relative;
+}
+
 .header {
 	z-index:4;
-	position:relative;
+	position:absolute;
 	display:block;
-	background-color:$white;
 	height:100px;
 	width: 100%;
 
@@ -10,20 +14,20 @@
 		z-index: 1;
 		position:absolute;
 		top: 30px;
-		left:15px;
-		width:258px;
+		left:30px;
+		width:60px;
 
 		@include for-tablet-only {
 			left:50%;
-			margin-left:-(258px/2);
-		}
-
-		@include for-desktop-and-up {
-			left:0;
+			margin-left:-(60px/2);
 		}
 
 		strong {
 			display:block;
+      background: url(../img/svg/logo.svg);
+      height: 30px;
+      width: 60px;
+      
 			@include hide-text;
 		}
 	}
