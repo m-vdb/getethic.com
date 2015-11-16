@@ -1,0 +1,22 @@
+.btn,
+input[type="submit"],
+button {
+	z-index: 1;
+	position: relative;
+	display: block;
+	background-color: $blue;
+	color: $white;
+	text-transform: uppercase;
+	text-align: center; 
+	padding: 20px 40px;
+	margin: auto;
+	width: 200px;
+	
+	@include transition(background-color .2s);
+	
+	@include for-desktop-and-up {
+		&:hover {
+			background-color: $mid-blue;
+		}
+	}
+}

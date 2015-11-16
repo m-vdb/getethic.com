@@ -1,11 +1,14 @@
 @import "fonts";
 
 %body {
+	background-color:$white;
+	font-family:$font-light, Arial;
+	font-size: $base-font-size;
+	color:$light-blue;
 	padding:0 !important;
 	min-width:320px;
-	font-family:$font-normal, Arial;
-	color:$black;
-	background-color:$white;
+	
+	// @include font-smoothing(antialiased);
 }
 
 a {
@@ -14,12 +17,29 @@ a {
 	color:inherit;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 { font-weight:normal; }
+h1 {
+	text-align: center;
+	font-family: $font-bold;
+	font-size: 40px;
+	color: $white;
+}
+
+h2 {
+	text-align: center;
+	font-size: 30px;
+	font-family: $font-bold;
+	color: $blue;
+	margin: 50px 0;
+	
+	&:after {
+		display: block;
+		background-color: $blue;
+		content: '';
+		margin: 10px auto; 
+		height: 1px;
+		width: 75px;
+	}
+}
 
 em { font-style:normal; }
 
@@ -28,6 +48,10 @@ b {
 	font-family: $font-bold;
 }
 
+p {
+	text-align: center;
+	line-height: 25px;
+}
 
 .page {
 	z-index:4;
@@ -46,17 +70,20 @@ b {
 	@include clearfix;
 
 	@include for-tablet-and-up { 
-		margin:0 auto;
+		margin:80px auto;
 		padding:0;
 		width:740px;
 	}
-
+	
 	@include for-desktop-and-up { width:1000px; }
 
 }
 
-
 @import "mixins",
 				"grid";
 
-@import "header";
+@import "header",
+				"hero",
+				"nav",
+				"form",
+				"footer";

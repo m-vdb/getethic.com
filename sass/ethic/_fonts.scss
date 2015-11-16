@@ -1,39 +1,23 @@
-// Fonts
-
-// Peugeot - Italic
+// Font - Light
 @font-face{
-	font-family:"Peugeot Italic";
-	src:url("../fonts/peugeot_italic-webfont.eot?#iefix");
-	src:url("../fonts/peugeot_italic-webfont.eot?#iefix") format("eot"),
-		url("../fonts/peugeot_italic-webfont.svg") format("svg"),
-		url("../fonts/peugeot_italic-webfont.woff") format("woff"),
-		url("../fonts/peugeot_italic-webfont.ttf") format("truetype");
+  font-family:"Font Light";
+  src:url("../fonts/OpenSans-Light-webfont.eot?#iefix");
+  src:url("../fonts/OpenSans-Light-webfont.eot?#iefix") format("eot"),
+    url("../fonts/OpenSans-Light-webfont.svg") format("svg"),
+    url("../fonts/OpenSans-Light-webfont.woff") format("woff"),
+    url("../fonts/OpenSans-Light-webfont.ttf") format("truetype");
+  font-weight:normal;
+  font-style:normal;
+}
+
+// Font - Semi Bold
+@font-face{
+	font-family:"Font Semi Bold";
+	src:url("../fonts/opensans-semibold.eot?#iefix");
+	src:url("../fonts/opensans-semibold.eot?#iefix") format("eot"),
+		url("../fonts/opensans-semibold.svg") format("svg"),
+		url("../fonts/opensans-semibold.woff") format("woff"),
+		url("../fonts/opensans-semibold.ttf") format("truetype");
 	font-weight:normal;
 	font-style:normal;
 }
-
-// Peugeot - Normal
-@font-face{
-	font-family:"Peugeot Normal";
-	src:url("../fonts/peugeot_normal-webfont.eot?#iefix");
-	src:url("../fonts/peugeot_normal-webfont.eot?#iefix") format("eot"),
-		url("../fonts/peugeot_normal-webfont.svg") format("svg"),
-		url("../fonts/peugeot_normal-webfont.woff") format("woff"),
-		url("../fonts/peugeot_normal-webfont.ttf") format("truetype");
-	font-weight:normal;
-	font-style:normal;
-}
-
-// Peugeot - Bold
-@font-face{
-	font-family:"Peugeot Bold";
-	src:url("../fonts/peugeot_bold-webfont.eot?#iefix");
-	src:url("../fonts/peugeot_bold-webfont.eot?#iefix") format("eot"),
-		url("../fonts/peugeot_bold-webfont.svg") format("svg"),
-		url("../fonts/peugeot_bold-webfont.woff") format("woff"),
-		url("../fonts/peugeot_bold-webfont.ttf") format("truetype");
-	font-weight:normal;
-	font-style:normal;
-}
-
-
