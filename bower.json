@@ -1,5 +1,7 @@
 {
   "name": "getethic.com",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bourbon": "~4.2.6"
+  }
 }
