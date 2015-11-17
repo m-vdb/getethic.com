@@ -1,9 +1,7 @@
-var path = require('path'),
-    gulp = require('gulp'),
+var gulp = require('gulp'),
     compass = require('gulp-compass');
 
-var bourbonEntryPoint = require.resolve('bourbon'),
-    bourbonDir = path.dirname(bourbonEntryPoint) + '/app/assets/stylesheets',
+var bourbonDir = 'js/libs/bourbon/app/assets/stylesheets',
     sassDir = './sass/*.scss',
     sassConfig = './config.rb',
     cssDir = 'css';
