@@ -6,9 +6,6 @@
     "gulp": "^3.9.0",
     "gulp-compass": "^2.1.0"
   },
-  "devDependencies": {
-    "bourbon": "^4.2.6"
-  },
   "engines": {
     "node": "~4.2.1"
   }
