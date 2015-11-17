@@ -9,8 +9,8 @@ define([
 	'config',
 
 	'libs/mejs/mediaelement-and-player',
-	'libs/swfobject',
-	'libs/parsley.min',
+	'libs/swfobject/swfobject/swfobject',
+	'libs/parsleyjs/dist/parsley.min',
 	'plugins/placeholders',
 	
 ], function(UI, config) {
