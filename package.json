@@ -1,11 +1,13 @@
 {
   "name": "getethic.com",
   "private": true,
-  "dependencies": {},
-  "devDependencies": {
-    "bourbon": "^4.2.6",
+  "dependencies": {
+    "bower": "^1.6.5",
     "gulp": "^3.9.0",
     "gulp-compass": "^2.1.0"
+  },
+  "devDependencies": {
+    "bourbon": "^4.2.6"
   },
   "engines": {
     "node": "~4.2.1"
