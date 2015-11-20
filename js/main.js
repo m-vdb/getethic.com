@@ -11,6 +11,7 @@ define([
 	'libs/mejs/mediaelement-and-player',
 	'libs/swfobject/swfobject/swfobject',
 	'libs/parsleyjs/dist/parsley.min',
+	'libs/scrollreveal/dist/scrollReveal.min',
 	'plugins/placeholders',
 	
 ], function(UI, config) {
@@ -18,6 +19,12 @@ define([
 	$(function() {
 		
 		UI.init();
+		
+		// Scroll Reveal
+		var config = {
+			mobile: false
+		};
+		window.sr = new scrollReveal( config );
 
 	});
 
