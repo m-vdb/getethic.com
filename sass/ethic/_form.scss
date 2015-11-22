@@ -1,22 +1,101 @@
-.btn,
-input[type="submit"],
-button {
-	z-index: 1;
-	position: relative;
-	display: block;
+.availability {
 	background-color: $blue;
 	color: $white;
+	padding: 30px 0;
+	
+}
+
+form {
+	margin: auto;
+	
+	@include for-tablet-and-up {
+		width: 390px;
+	}
+}
+
+fieldset {
+	border: 0;
+	outline: none;
+}
+
+input[type="email"] {
+	display: inline-block;
+	background-color: $mid-blue;
+	border: 0;
+	color: $white;
 	text-transform: uppercase;
+	text-align: center;
+	font-family: $font-bold;
+	padding: 6%;
+	margin: 1% auto;
+	width: 88%;
+	
+	@include placeholder {color: $white;}
+	
+	@include for-tablet-and-up {
+		text-align: left;
+		margin: auto;
+		padding: 20px;
+		width: 250px;
+	}
+}
+
+button {
+	display: block;
+	background-color: $mid-blue;
+	padding: 6%;
+	width: 100%;
+	
+	@include for-tablet-and-up {
+		float: right;
+		padding: 20px 30px;
+		height: 62px;
+		width: auto;
+	}
+	
+	@include for-desktop-and-up {
+		&:hover {
+			background-color: $white;
+			
+			.send {
+				background: url(../img/svg/arrow-blue.svg);
+			}
+		}
+	}
+	
+	.send {
+		display: block;
+		background: url(../img/svg/arrow-white.svg);
+		margin: auto;
+		height: 15px;
+		width: 15px;
+	}
+	
+}
+
+.btn {
+	display: block;
+	background-color: $blue;
 	text-align: center; 
 	padding: 20px 40px;
-	margin: auto;
 	width: 200px;
-	
-	@include transition(background-color .2s);
 	
 	@include for-desktop-and-up {
 		&:hover {
 			background-color: $mid-blue;
 		}
 	}
+}
+
+.btn,
+input,
+button {
+	z-index: 1;
+	position: relative;
+	border: 0;
+	color: $white;
+	text-transform: uppercase;
+	margin: auto;
+	
+	@include transition(background-color .2s);
 }

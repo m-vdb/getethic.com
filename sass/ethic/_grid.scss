@@ -2,12 +2,16 @@
 	@include new-grid(
 		$name: 'mobile-layout',
 		$columns: 12,
-		$gutter-width: 2%,
+		$gutter-width: 0.2%,
 		$fit: true
 	);
 
 	.row {
 		@extend %mobile-layout-grid;
+	}
+	
+	.profil li {
+		@extend %mobile-layout-cell-6;
 	}
 
 }
@@ -16,7 +20,7 @@
 	@include new-grid(
 		$name: 'tablet-layout',
 		$columns: 12,
-		$gutter-width: 2%,
+		$gutter-width: 0.1%,
 		$fit: true
 	);
 
