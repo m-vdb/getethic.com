@@ -14,12 +14,11 @@
 		z-index: 1;
 		position:absolute;
 		top: 30px;
-		left:30px;
-		width:60px;
-
-		@include for-tablet-only {
-			left:50%;
-			margin-left:-(60px/2);
+		left: 16px;
+		width: 60px;
+		
+		@include for-tablet-and-up {
+			left: 30px;
 		}
 
 		strong {

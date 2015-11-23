@@ -16,6 +16,11 @@ form {
 fieldset {
 	border: 0;
 	outline: none;
+	padding: 0;
+	
+	@include for-tablet-and-up {
+		background-color: $mid-blue;
+	}
 }
 
 input[type="email"] {
@@ -26,17 +31,20 @@ input[type="email"] {
 	text-transform: uppercase;
 	text-align: center;
 	font-family: $font-bold;
+	vertical-align: top;
 	padding: 6%;
 	margin: 1% auto;
 	width: 88%;
 	
 	@include placeholder {color: $white;}
+	@include border-radius(0);
 	
 	@include for-tablet-and-up {
+		border-right: 1px solid $blue;
 		text-align: left;
 		margin: auto;
 		padding: 20px;
-		width: 250px;
+		width: 265px;
 	}
 }
 
@@ -47,13 +55,12 @@ button {
 	width: 100%;
 	
 	@include for-tablet-and-up {
-		float: right;
-		padding: 20px 30px;
-		height: 62px;
+		display: inline-block;
+		padding: 24px 30px;
 		width: auto;
 	}
 	
-	@include for-desktop-and-up {
+	@include for-desktop-and-up {		
 		&:hover {
 			background-color: $white;
 			

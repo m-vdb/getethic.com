@@ -2,25 +2,20 @@
 	@include new-grid(
 		$name: 'mobile-layout',
 		$columns: 12,
-		$gutter-width: 0.2%,
+		$gutter-width: 2%,
 		$fit: true
 	);
 
 	.row {
 		@extend %mobile-layout-grid;
 	}
-	
-	.profil li {
-		@extend %mobile-layout-cell-6;
-	}
-
 }
 
 @include for-tablet-and-up {
 	@include new-grid(
 		$name: 'tablet-layout',
 		$columns: 12,
-		$gutter-width: 0.1%,
+		$gutter-width: 2%,
 		$fit: true
 	);
 
@@ -31,26 +26,17 @@
 	.box {
 		@extend %tablet-layout-cell-4;
 	}
-	
-	.profil li {
-		@extend %tablet-layout-cell-4;
-	}
-	
 }
 
 @include for-desktop-and-up {
 	@include new-grid(
 		$name: 'desktop-layout',
 		$columns: 12,
-		$gutter-width: 0.1%,
+		$gutter-width: 2%,
 		$fit: true
 	);
 
 	.row {
 		@extend %desktop-layout-grid;
-	}
-	
-	.profil li {
-		@extend %desktop-layout-cell-3;
 	}
 }

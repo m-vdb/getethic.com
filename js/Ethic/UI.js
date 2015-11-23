@@ -16,6 +16,7 @@ define(['jquery'], function($) {
 			UI.$fields = 				$('input, textarea');
 			UI.$medias = 				$('video, audio');
 			UI.$video = 				$('video');
+			UI.$scroll = 				$('.menu');
 
 
 			// Better scroll & resize events
