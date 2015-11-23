@@ -20,6 +20,9 @@ define([
 		
 		UI.init();
 		
+		// Init parsley
+		$('.form').parsley();
+		
 		// Scroll Reveal
 		var config = {
 			mobile: false
@@ -34,19 +37,14 @@ define([
 						var $scroll = UI.$scroll;
 
 						if (UI.$window.scrollTop() > 558) {
-					$scroll.addClass('bgscroll');
-
+						$sd.addClass('bgscroll');
 						} else {
-						 
-					$scroll.removeClass('bgscroll');
-						}
+						$sd.removeClass('bgscroll');
+					}
 				}
 
 			};
-			UI.onscroll(bgscroll);
-		
-			// Init parsley
-			$('.form').parsley();
+		UI.onscroll(bgscroll);
 
 	});
 

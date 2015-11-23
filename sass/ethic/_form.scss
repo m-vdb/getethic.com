@@ -14,9 +14,11 @@ form {
 }
 
 fieldset {
+	position: relative;
 	border: 0;
 	outline: none;
 	padding: 0;
+	margin: 0;
 	
 	@include for-tablet-and-up {
 		background-color: $mid-blue;
@@ -40,11 +42,10 @@ input[type="email"] {
 	@include border-radius(0);
 	
 	@include for-tablet-and-up {
-		border-right: 1px solid $blue;
 		text-align: left;
 		margin: auto;
 		padding: 20px;
-		width: 265px;
+		width: 269px;
 	}
 }
 
@@ -56,6 +57,7 @@ button {
 	
 	@include for-tablet-and-up {
 		display: inline-block;
+		border-left: 1px solid $blue !important;
 		padding: 24px 30px;
 		width: auto;
 	}
@@ -105,4 +107,27 @@ button {
 	margin: auto;
 	
 	@include transition(background-color .2s);
+}
+
+.parsley-errors-list {
+	position: absolute;
+	background-color: $error;
+	list-style: none;
+	right: -200px;
+	top: -6px;
+	padding: 10px;
+	
+	&:after {
+			content: "";
+			width: 0;
+			height: 0;
+			position: absolute;
+			left: -4px;
+			bottom: 16px;
+			border-width: 9px 9px 0 0;
+			border-style:solid;
+			border-color:transparent $error;
+
+			@include transform(rotate(135deg));
+		}
 }
