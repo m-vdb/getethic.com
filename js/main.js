@@ -25,6 +25,28 @@ define([
 			mobile: false
 		};
 		window.sr = new scrollReveal( config );
+		
+		// Add class
+		var bgscroll = function () {
+			var $sd = UI.$scroll;
+
+					if (Modernizr.mq('only screen and (min-width: 800px)')) {
+						var $scroll = UI.$scroll;
+
+						if (UI.$window.scrollTop() > 558) {
+					$scroll.addClass('bgscroll');
+
+						} else {
+						 
+					$scroll.removeClass('bgscroll');
+						}
+				}
+
+			};
+			UI.onscroll(bgscroll);
+		
+			// Init parsley
+			$('.form').parsley();
 
 	});
 

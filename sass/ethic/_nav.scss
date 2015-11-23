@@ -2,18 +2,48 @@
 	position: fixed;
 	z-index: 6;
 	text-align: center;
-	top: 30px;
-	right: 30px;
+	top: 35px;
+	right: 16px;
+	
+	@include for-tablet-and-up {
+		right: 30px;
+	}
 	
 	@include for-desktop-and-up {
 		&:hover {
-			.line {
-				@include animation('move 1s infinite');
+			.line01 {
+				@include animation(move1 1s infinite);
 				
-				@include keyframes(move) {
-				  0% { width:50%; }
-					50% { width:100%; }
-					100% { width:50%; }
+				@include keyframes(move1) {
+				  0% { width:100%; }
+				  10% { width:90%; }
+				  30% { width:70%; }
+				  50% { width:50%; }
+				  70% { width:70%; }
+				  90% { width:90%; }
+				  100% { width:100%; }
+				}
+			}
+			
+			.line02 {
+				@include animation(move2 1s infinite);
+				
+				@include keyframes(move2) {
+				  0% { width:100%; }
+				  25% { width:20%; }
+					50% { width:50%; }
+					100% { width:100%; }
+				}
+			}
+			
+			.line03 {
+				@include animation(move3 1s infinite);
+				
+				@include keyframes(move3) {
+				  0% { width:20%; }
+				  25% { width:80%; }
+					50% { width:60%; }
+					100% { width:20%; }
 				}
 			}
 		}
@@ -21,7 +51,7 @@
 }
 
 .line {
-	width: 35px;
+	width: 30px;
 }
 
 .line01,
@@ -29,8 +59,14 @@
 .line03 {
 	display: block;
 	background-color: $white;
-	margin: 4px;
+	margin: 4px auto;
 	height: 1px;
+	
+	@include transition(background-color .2s);
+	
+	.bgscroll & {
+		background-color: $light-blue;
+	}
 }
 
 @include for-tablet-and-up {

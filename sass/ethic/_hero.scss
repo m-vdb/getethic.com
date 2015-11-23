@@ -2,9 +2,25 @@
 	position: relative;
 	background-color: $black;
 	overflow: hidden;
-	max-height: 600px;
+	height: 100vh;
+	
+	@include for-tablet-and-up {
+		height: auto;
+	}
+	
+	@include for-desktop-and-up {
+		max-height: 600px;
+	}
 	
 	.hero-banner {
+		display: block;
+		
+		@include for-mobile-only {
+			height: 100%;
+			width: auto;	
+			max-width: auto;	
+		}
+		
 		@include opacity(.5);
 	}
 	

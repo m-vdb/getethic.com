@@ -1,5 +1,10 @@
 .box {
   text-align: center;
+  margin: 50px 0;
+  
+  @include for-tablet-and-up {
+    margin: auto;
+  }
   
   img {
     display: block;

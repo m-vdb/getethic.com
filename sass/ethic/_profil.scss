@@ -3,13 +3,26 @@
 		padding: 0;
 		
 		li {
-			display: inline-block;
+			float: left;
+			display: block;
+			border-right: 1px solid $white;
+			border-bottom: 1px solid $white;
 			list-style: none;
 			overflow: hidden;
-			width: 25%;
+			margin: auto;
+			width: (99%/2);
+			
+			@include for-tablet-and-up {
+				height: 187px;
+				width: (99%/4);
+			}
 			
 			@include for-desktop-and-up {
 				height: 250px;
+			}
+			
+			img {
+				display: block;
 			}
 		}
 	}
