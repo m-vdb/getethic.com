@@ -82,7 +82,7 @@ p {
 .page {
 	z-index:4;
 	position:relative;
-	margin-right: 0;
+	right: 0;
 	
 	@include transition(all 1s $ease-out-quint);
 	
@@ -93,7 +93,7 @@ p {
 	}
 	
 	.visible & {
-		margin-right: 300px;
+		right: 300px;
 	}
 }
 
@@ -106,7 +106,7 @@ p {
 	right:0;
 	
 	@include opacity(0);
-	@include transition(background-color .2s);
+	@include transition(opacity .2s);
 	
 	.visible & {
 		z-index: 99;
