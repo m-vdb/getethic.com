@@ -5,9 +5,6 @@
 	top: 35px;
 	right: 16px;
 	
-	// @include opacity(1);
-	// @include transition(all 1s .5s $ease-out-quint);
-	
 	.visible & {
 		@include transform(rotate(180deg));
 		
@@ -25,6 +22,12 @@
 	
 	@include for-tablet-and-up {
 		right: 30px;
+		
+		@include transition(all 1s $ease-out-quint);
+		
+		.visible & {
+			right: 135px;
+		}
 	}
 	
 	@include for-desktop-and-up {
@@ -93,6 +96,10 @@
 	
 	.bgscroll & {
 		background-color: $light-blue;
+		
+		.visible & {
+			background-color: $white;
+		}
 	}
 }
 
