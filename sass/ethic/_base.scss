@@ -82,10 +82,35 @@ p {
 .page {
 	z-index:4;
 	position:relative;
+	margin-right: 0;
+	
+	@include transition(margin-right .2s);
+	
 	@include clearfix;
 
 	@include for-mobile-only {
 		min-width:320px;
+	}
+	
+	.visible & {
+		margin-right: 288px;
+	}
+}
+
+.overlay {
+	position: fixed;
+	background-color: $black;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	
+	@include opacity(0);
+	@include transition(background-color .2s);
+	
+	.visible & {
+		z-index: 99;
+		@include opacity(.8);
 	}
 }
 

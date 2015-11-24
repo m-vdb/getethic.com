@@ -5,6 +5,13 @@
 	top: 35px;
 	right: 16px;
 	
+	@include opacity(1);
+	@include transition(background-color .2s);
+	
+	.visible & {
+		@include opacity(0);
+	}
+	
 	@include for-tablet-and-up {
 		right: 30px;
 	}
@@ -71,4 +78,49 @@
 
 @include for-tablet-and-up {
 	padding: 10px;
+}
+
+.nav {
+	position: fixed;
+	background-color: $blue;
+	color: $white;
+	font-size: em(25px); 
+	text-align: center;
+	list-style: none;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	padding: 20px 0;
+	margin: 0 -300px 0 0;
+	
+	@include transition(margin .2s);
+	
+	.visible & {
+		z-index: 999;
+		margin: 0;
+	}
+	
+	li {
+		&:after {
+			display: block;
+			background-color: $white;
+			content: '';
+			margin: auto;
+			height: 1px;
+			width: 0;
+			
+			@include transition(width .2s);
+		}
+		
+		&:hover {
+			&:after {
+				width: 30%;
+			}
+		}
+		
+		a {
+			display: block;
+			padding: 20px 40px;;
+		}
+	}
 }
