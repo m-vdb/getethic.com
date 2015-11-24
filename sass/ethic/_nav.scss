@@ -1,15 +1,26 @@
 .menu {
 	position: fixed;
-	z-index: 6;
+	z-index: 999;
 	text-align: center;
 	top: 35px;
 	right: 16px;
 	
-	@include opacity(1);
-	@include transition(all 1s .5s $ease-out-quint);
+	// @include opacity(1);
+	// @include transition(all 1s .5s $ease-out-quint);
 	
 	.visible & {
-		@include opacity(0);
+		@include transform(rotate(180deg));
+		
+		.line02 {
+			@include opacity(0);
+		}
+		.line01 {
+			@include transform(rotate(45deg));
+		}
+		.line03 {
+			margin-top: -10px;
+			@include transform(rotate(-45deg));
+		}
 	}
 	
 	@include for-tablet-and-up {
@@ -29,6 +40,10 @@
 				  70% { width:70%; }
 				  90% { width:90%; }
 				  100% { width:100%; }
+				}
+				
+				.visible & {
+					@include animation(move1 0s infinite);
 				}
 			}
 			
@@ -52,6 +67,10 @@
 					50% { width:60%; }
 					100% { width:20%; }
 				}
+				
+				.visible & {
+					@include animation(move3 0s infinite);
+				}
 			}
 		}
 	}
@@ -69,7 +88,8 @@
 	margin: 4px auto;
 	height: 1px;
 	
-	@include transition(background-color .2s);
+	@include opacity(1);
+	@include transition(all .2s);
 	
 	.bgscroll & {
 		background-color: $light-blue;
@@ -90,14 +110,14 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-	padding: 20px 0;
+	padding: 60px 0;
 	margin: 0 -300px 0 0;
 	width: 300px;
 	
 	@include transition(all 1s $ease-out-quint);
 	
 	.visible & {
-		z-index: 999;
+		z-index: 990;
 		margin: 0;
 	}
 	
