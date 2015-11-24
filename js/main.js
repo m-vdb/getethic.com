@@ -31,10 +31,10 @@ define([
 		
 		// Add class
 		var bgscroll = function () {
-			var $sd = UI.$scroll;
+			var $sd = UI.$nav;
 
 					if (Modernizr.mq('only screen and (min-width: 800px)')) {
-						var $scroll = UI.$scroll;
+						var $nav = UI.$nav;
 
 						if (UI.$window.scrollTop() > 558) {
 						$sd.addClass('bgscroll');
@@ -45,6 +45,37 @@ define([
 
 			};
 		UI.onscroll(bgscroll);
+		
+		// Nav visible
+		var closeHandler = function(e) {
+			if(UI.$body.hasClass('visible')) {
+				e.preventDefault();
+				UI.$body.removeClass('visible');
+
+				$('.overlay').off('click', closeHandler);
+			}
+		};
+		
+		if(UI.$nav.length) { 
+			UI.$nav.on('click', function(e) {
+				e.preventDefault();
+
+				if(!UI.$body.hasClass('visible')) { 
+					e.stopPropagation();
+				}
+				
+				UI.$body.addClass('visible');
+
+				$('.overlay').on('click', closeHandler);
+			});
+		}
+
+		if(UI.$SidebarClose.length) { 
+			UI.$SidebarClose.on('click', function(e) {
+				e.preventDefault();
+				UI.$body.removeClass('visible');
+			});
+		}
 
 	});
 
