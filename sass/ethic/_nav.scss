@@ -6,7 +6,7 @@
 	right: 16px;
 	
 	@include opacity(1);
-	@include transition(background-color .2s);
+	@include transition(all 1s .5s $ease-out-quint);
 	
 	.visible & {
 		@include opacity(0);
@@ -92,8 +92,9 @@
 	bottom: 0;
 	padding: 20px 0;
 	margin: 0 -300px 0 0;
+	width: 300px;
 	
-	@include transition(margin .2s);
+	@include transition(all 1s $ease-out-quint);
 	
 	.visible & {
 		z-index: 999;

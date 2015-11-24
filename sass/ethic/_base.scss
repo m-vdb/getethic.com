@@ -84,7 +84,7 @@ p {
 	position:relative;
 	margin-right: 0;
 	
-	@include transition(margin-right .2s);
+	@include transition(all 1s $ease-out-quint);
 	
 	@include clearfix;
 
@@ -93,7 +93,7 @@ p {
 	}
 	
 	.visible & {
-		margin-right: 288px;
+		margin-right: 300px;
 	}
 }
 
