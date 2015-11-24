@@ -64,16 +64,9 @@ define([
 					e.stopPropagation();
 				}
 				
-				UI.$body.addClass('visible');
+				UI.$body.toggleClass('visible');
 
 				$('.overlay').on('click', closeHandler);
-			});
-		}
-
-		if(UI.$SidebarClose.length) { 
-			UI.$SidebarClose.on('click', function(e) {
-				e.preventDefault();
-				UI.$body.removeClass('visible');
 			});
 		}
 
