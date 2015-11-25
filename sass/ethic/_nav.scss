@@ -5,7 +5,11 @@
 	top: 35px;
 	right: 16px;
 	
+	@include transition(all 1s $ease-out-quint);
+	
 	.visible & {
+		right: 135px;
+		
 		@include transform(rotate(180deg));
 		
 		.line02 {
@@ -22,12 +26,6 @@
 	
 	@include for-tablet-and-up {
 		right: 30px;
-		
-		@include transition(all 1s $ease-out-quint);
-		
-		.visible & {
-			right: 135px;
-		}
 	}
 	
 	@include for-desktop-and-up {
@@ -94,6 +92,10 @@
 	@include opacity(1);
 	@include transition(all .2s);
 	
+	@include for-tablet-and-up {
+		background-color: $white;
+	}
+	
 	.bgscroll & {
 		background-color: $light-blue;
 		
@@ -129,6 +131,18 @@
 	}
 	
 	li {
+		margin-right: -300px;
+		
+		@include transition(all 1s .3s $ease-out-quint);
+		
+		&:last-child {
+			@include transition(all 1s .4s $ease-out-quint);
+		}
+		
+		.visible & {
+			margin-right: 0;
+		}
+		
 		&:after {
 			display: block;
 			background-color: $white;
@@ -142,7 +156,7 @@
 		
 		&:hover {
 			&:after {
-				width: 30%;
+				width: 10%;
 			}
 		}
 		
