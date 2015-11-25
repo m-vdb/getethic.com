@@ -32,11 +32,16 @@ define([
 		// Add class
 		var bgscroll = function () {
 			var $sd = UI.$nav;
+				
+				if (UI.$window.scrollTop() > 450) {
+					$sd.addClass('bgscroll');
+					} else {
+					$sd.removeClass('bgscroll');
+				}
+					
+				if (Modernizr.mq('only screen and (min-width: 800px)')) {
 
-					if (Modernizr.mq('only screen and (min-width: 800px)')) {
-						var $nav = UI.$nav;
-
-						if (UI.$window.scrollTop() > 558) {
+					if (UI.$window.scrollTop() > 558) {
 						$sd.addClass('bgscroll');
 						} else {
 						$sd.removeClass('bgscroll');
