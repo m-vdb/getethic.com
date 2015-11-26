@@ -2,40 +2,11 @@
 	position: relative;
 	margin: 60px 0;
 	
-	&:nth-child(even) {
-		ul {
-			&:before {
-				left: -150px; 
-			}
-			
-			&:after {
-				left: -30px;
-			}
-		}
-	}
-		
-	&:nth-child(odd) {
-		ul {
-			text-align: right;
-			left: 10px;
-			
-			&:before {
-				right: -150px;
-			}
-			
-			&:after {
-				right: -30px;
-			}
-		}
-	}
-	
 	ul {
-		position: absolute;
+		display: block;
 		list-style: none;
-		right: 10px;
-		top: 50%;
+		text-align: center;
 		padding: 0;
-		margin-top: -(154px/2);
 		width: 220px;
 		
 		&:before {
@@ -66,6 +37,62 @@
 				color: $blue;
 			}
 		}
+		
+		@include for-mobile-only {
+			margin: 30px auto;
+		}
+		
+		@include for-tablet-and-up {
+			position: absolute;
+			top: 50%;
+			right: 55px;
+			margin-top: -(154px/2);
+		}
+		
+		@include for-desktop-and-up {
+			right: 10px;
+		}
+	}
+	
+	@include for-tablet-and-down {
+		ul {
+			&:before {
+				left: -150px; 
+			}
+			
+			&:after {
+				left: -30px;
+			}
+		}
+	}
+	
+	@include for-desktop-and-up {
+		&:nth-child(even) {
+			ul {
+				&:before {
+					left: -150px; 
+				}
+				
+				&:after {
+					left: -30px;
+				}
+			}
+		}
+			
+		&:nth-child(odd) {
+			ul {
+				text-align: right;
+				left: 10px;
+				
+				&:before {
+					right: -150px;
+				}
+				
+				&:after {
+					right: -30px;
+				}
+			}
+		}
 	}
 }
 
@@ -77,6 +104,10 @@
 	width: 260px;
 	
 	@include border-radius(260px);
+	
+	@include for-tablet-only {
+		margin: 0 70px;
+	}
 	
 	img {
 		z-index: 1;
