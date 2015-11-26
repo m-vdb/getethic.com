@@ -20,6 +20,7 @@ define([
 		
 		UI.init();
 		
+		
 		// Init parsley
 		$('.form').parsley();
 		

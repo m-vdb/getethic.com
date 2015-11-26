@@ -85,7 +85,7 @@
 .line02,
 .line03 {
 	display: block;
-	background-color: $white;
+	background-color: $light-blue;
 	margin: 4px auto;
 	height: 1px;
 	
@@ -93,6 +93,10 @@
 	@include transition(all .2s);
 	
 	@include for-tablet-and-up {
+		background-color: $white;
+	}
+	
+	.home & {
 		background-color: $white;
 	}
 	
