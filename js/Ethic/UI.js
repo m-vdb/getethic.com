@@ -11,11 +11,12 @@ define(['jquery'], function($) {
 			// Caching but nothing too specific here
 			UI.$window =				$(window);
 			UI.$body =					$(document.body);
-			UI.$htmlBody = 				$(document.documentElement).add(document.body);
+			UI.$htmlBody = 			$(document.documentElement).add(document.body);
 			UI.$form = 					$('form');
 			UI.$fields = 				$('input, textarea');
 			UI.$medias = 				$('video, audio');
 			UI.$video = 				$('video');
+			UI.$nav = 					$('.menu');
 
 
 			// Better scroll & resize events

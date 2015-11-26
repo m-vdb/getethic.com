@@ -1,16 +1,16 @@
 @import "compass/css3";
 @import "bourbon";
-@import "mediaquery/functions";
-@import "mediaquery/variables";
-@import "mediaquery/mixins";
-@import "mediaquery/helpers";
-@import "mediaquery/grid";
-@import "ethic/variables";
+@import "mediaquery/mediaquery";
+@import "components/mixins";
+@import "ethic/vars";
 @import "ethic/base";
 
 body {
 	@extend %body;
 }
-ul, ol {
-	margin: 0;
+
+img {
+  height: auto;
+  width: 100%;
+  // max-width: 100%;
 }
