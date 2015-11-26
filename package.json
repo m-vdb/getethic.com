@@ -2,7 +2,7 @@
   "name": "getethic.com",
   "private": true,
   "dependencies": {
-    "bower": "^1.6.5",
+    "bower": "^1.6.7",
     "gulp": "^3.9.0",
     "gulp-compass": "^2.1.0"
   },
