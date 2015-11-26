@@ -22,7 +22,11 @@ a {
 h1 {
 	text-align: center;
 	font-size: 30px;
-	color: $white;
+	color: $light-blue;
+	
+	.home & {
+		color: $white;
+	}
 	
 	@include for-tablet-and-up {
 		font-size: 40px;
@@ -66,6 +70,8 @@ h3 {
 }
 
 em { font-style:normal; }
+
+small { display: block; text-align: center; }
 
 strong,
 b {

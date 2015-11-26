@@ -92,20 +92,16 @@
 	@include opacity(1);
 	@include transition(all .2s);
 	
-	@include for-tablet-and-up {
-		background-color: $white;
-	}
-	
 	.home & {
 		background-color: $white;
 	}
 	
 	.bgscroll & {
 		background-color: $light-blue;
-		
-		.visible & {
-			background-color: $white;
-		}
+	}
+	
+	.visible & {
+		background-color: $white;
 	}
 }
 
