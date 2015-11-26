@@ -35,6 +35,11 @@ define(['jquery'], function($) {
 				}
 			}, 250);
 
+			$('a[href=#register]').smoothScroll({
+				easing: 'easeOutCubic',
+				speed: 5000
+			});
+
 		},
 		onscroll: function(callback) {
 			onscrollCallbacks.push(callback);
