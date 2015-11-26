@@ -1,0 +1,79 @@
+.hero {
+	position: relative;
+	background-color: $very-light-gray;
+	// border-bottom: 1px solid $light-blue;
+	overflow: hidden;
+	min-height: 300px;
+	height: 100vh;
+	
+	@include for-tablet-and-up {
+		height: auto;
+	}
+	
+	@include for-desktop-and-up {
+		max-height: 600px;
+	}
+	
+	.home & {
+		background-color: $black;
+	}
+		
+	.hero-banner {
+		display: block;
+		
+		@include for-mobile-only {
+			height: 100%;
+			width: auto;	
+			max-width: auto;	
+		}
+		
+		@include opacity(.5);
+	}
+	
+	.hero-baseline {
+		z-index: 1;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-top:-(131px/2);
+		width: 100%;
+		
+		.home & {
+			margin-top:-(200px/2);
+		}
+		
+		h1 {
+			margin-bottom: 50px;
+		}
+		
+		.btn {
+			text-align: left;	
+			
+			@include for-desktop-and-up {
+				&:hover {
+					.arrow {
+						@include animation(move-right 1s infinite);
+						
+						@include keyframes(move-right) {
+						  0% { opacity: 1; left: 230px; }
+						  25% { opacity: 0; left: 260px; }
+						  50% { opacity: 0; left: 200px; }
+							100% { opacity: 1; left: 230px; }
+						}
+					}
+				}
+			}
+		}
+		
+		.arrow {
+			position: absolute;
+			top: 23px;
+			right: 0;
+			margin-right: 40px;
+			height: 15px;
+			width: 15px;
+			
+			@include opacity(1);
+		} 
+	}
+}

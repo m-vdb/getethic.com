@@ -1,8 +1,12 @@
+.heading {
+	z-index: 10;
+	position: relative;
+}
+
 .header {
 	z-index:4;
-	position:relative;
+	position:absolute;
 	display:block;
-	background-color:$white;
 	height:100px;
 	width: 100%;
 
@@ -10,21 +14,24 @@
 		z-index: 1;
 		position:absolute;
 		top: 30px;
-		left:15px;
-		width:258px;
-
-		@include for-tablet-only {
-			left:50%;
-			margin-left:-(258px/2);
-		}
-
-		@include for-desktop-and-up {
-			left:0;
+		left: 16px;
+		width: 60px;
+		
+		@include for-tablet-and-up {
+			left: 30px;
 		}
 
 		strong {
 			display:block;
+      background: url(../img/svg/logo-blue.svg);
+      height: 30px;
+      width: 60px;
+      
 			@include hide-text;
+			
+			.home & {
+				background: url(../img/svg/logo.svg);
+			}
 		}
 	}
 }

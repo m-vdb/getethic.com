@@ -1,12 +1,17 @@
 @import "fonts";
 
 %body {
+	background-color:$white;
+	font-family:$font-light, Arial;
+	font-size: $base-font-size;
+	color:$light-blue;
 	padding:0 !important;
 	min-width:320px;
-	font-family:$font-normal, Arial;
-	color:$black;
-	background-color:$white;
+	
+	@include font-smoothing;
 }
+
+[data-sr] { visibility: hidden; }
 
 a {
 	text-decoration:none;
@@ -14,49 +19,130 @@ a {
 	color:inherit;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 { font-weight:normal; }
+h1 {
+	text-align: center;
+	font-size: 30px;
+	color: $light-blue;
+	
+	.home & {
+		color: $white;
+	}
+	
+	@include for-tablet-and-up {
+		font-size: 40px;
+	}
+}
+
+h2 {
+	text-align: center;
+	font-size: 25px;
+	color: $blue;
+	margin: 50px 0;
+	
+	@include for-tablet-and-up {
+		font-size: 30px;
+	}
+	
+	.availability & {
+		color: $white;
+	}
+	
+	&:after {
+		display: block;
+		background-color: $blue;
+		content: '';
+		margin: 10px auto; 
+		height: 1px;
+		width: 75px;
+		
+		.availability & {
+			background-color: $white;
+		}
+	}
+}
+
+h3 {
+	font-size: em(17px);
+	
+	@include for-tablet-and-up {
+		font-size: 20px;
+	}
+}
 
 em { font-style:normal; }
+
+small { display: block; text-align: center; }
 
 strong,
 b {
 	font-family: $font-bold;
 }
 
+p {
+	text-align: center;
+	line-height: 25px;
+	
+	@include word-wrap;
+}
 
 .page {
 	z-index:4;
 	position:relative;
+	right: 0;
+	
+	@include transition(all 1s $ease-out-quint);
+	
 	@include clearfix;
 
 	@include for-mobile-only {
 		min-width:320px;
 	}
+	
+	.visible & {
+		right: 300px;
+	}
+}
+
+.overlay {
+	position: fixed;
+	background-color: $black;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	
+	@include opacity(0);
+	@include transition(opacity .2s);
+	
+	.visible & {
+		z-index: 99;
+		@include opacity(.8);
+	}
 }
 
 .wrapper {
-	margin:0 auto;
+	position: relative;
 	padding-left:15px;
 	padding-right:15px;
+	margin: 40px auto;
+	
 	@include clearfix;
 
 	@include for-tablet-and-up { 
-		margin:0 auto;
+		margin:80px auto;
 		padding:0;
 		width:740px;
 	}
-
+	
 	@include for-desktop-and-up { width:1000px; }
-
 }
 
+@import "grid";
 
-@import "mixins",
-				"grid";
-
-@import "header";
+@import "header",
+				"hero",
+				"box",
+				"profil",
+				"nav",
+				"form",
+				"footer";
