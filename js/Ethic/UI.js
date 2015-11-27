@@ -35,14 +35,18 @@ define(['jquery'], function($) {
 				}
 			}, 250);
 
-			$('a[href=#register]').click(function () {
+			$('a[href=#register]').click(function (e) {
+				e.preventDefault();
+				e.stopPropagation();
 				$('html, body').animate({
 					scrollTop: $('#register').offset().top
 				}, {
 					easing: 'easeOutCubic',
-					duration: 2000
+					duration: 1500,
+					done: function () {
+			       window.location.hash = '#register';
+			    }
 				});
-				return false;
 			});
 
 		},
