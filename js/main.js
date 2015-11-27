@@ -13,8 +13,7 @@ define([
 	'libs/parsleyjs/dist/parsley.min',
 	'libs/scrollreveal/dist/scrollReveal.min',
 	'plugins/placeholders',
-	'plugins/jquery-ui.effects',
-	'libs/jquery-smooth-scroll/jquery.smooth-scroll.min'
+	'plugins/jquery-ui.effects'
 	
 ], function(UI, config) {
 
