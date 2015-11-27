@@ -35,9 +35,14 @@ define(['jquery'], function($) {
 				}
 			}, 250);
 
-			$('a[href=#register]').smoothScroll({
-				easing: 'easeOutCubic',
-				speed: 5000
+			$('a[href=#register]').click(function () {
+				$('html, body').animate({
+					scrollTop: $('#register').offset().top
+				}, {
+					easing: 'easeOutCubic',
+					duration: 2000
+				});
+				return false;
 			});
 
 		},
