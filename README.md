@@ -1,4 +1,7 @@
 # getethic.com
+
+[![Circle CI](https://circleci.com/gh/m-vdb/getethic.com.svg?style=shield&circle-token=6ba37f823f016247657cbc9e0a127f07ee3250a5)](https://circleci.com/gh/m-vdb/getethic.com/tree/master)
+
 The landing page of Ethic.
 
 
