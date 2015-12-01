@@ -11,6 +11,8 @@
     "node": "~4.2.2"
   },
   "scripts": {
-    "postinstall": "./node_modules/.bin/bower install"
+    "postinstall": "bower install",
+    "prestart": "gulp compass",
+    "start": "node server.js"
   }
 }
