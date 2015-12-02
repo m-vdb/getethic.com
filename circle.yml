@@ -1,0 +1,18 @@
+machine:
+  services:
+    - docker
+  pre:
+    - gem install compass
+
+test:
+  override:
+    - gulp compass
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - docker build -t $DOCKER_REPO:master .
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker tag 
+      - docker push $DOCKER_REPO
