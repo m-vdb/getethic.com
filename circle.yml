@@ -1,6 +1,8 @@
 machine:
   services:
     - docker
+  pre:
+    - gem install compass
 
 test:
   override:
