@@ -29,7 +29,7 @@ define([
 		};
 		window.sr = new scrollReveal( config );
 		
-		// Add class
+		// Add class scroll
 		var bgscroll = function () {
 			var $sd = UI.$nav;
 				
@@ -74,6 +74,14 @@ define([
 				$('.overlay').on('click', closeHandler);
 			});
 		}
+		
+		// FAQ
+      if ( UI.$faq.length ) {
+        UI.$faq.find ( 'span' ).on ( 'click', function( e ) {
+            e.preventDefault ();
+            $ ( this ).closest ( UI.$faq ).toggleClass ( 'expanded' );
+        } );
+      }
 
 	});
 
