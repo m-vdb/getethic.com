@@ -154,9 +154,11 @@
 			@include transition(width .2s);
 		}
 		
-		&:hover {
-			&:after {
-				width: 10%;
+		@include for-desktop-and-up {
+			&:hover {
+				&:after {
+					width: 10%;
+				}
 			}
 		}
 		
