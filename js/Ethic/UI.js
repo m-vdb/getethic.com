@@ -17,6 +17,7 @@ define(['jquery'], function($) {
 			UI.$medias = 				$('video, audio');
 			UI.$video = 				$('video');
 			UI.$nav = 					$('.menu');
+			UI.$faq = 					$('.question');
 
 
 			// Better scroll & resize events
