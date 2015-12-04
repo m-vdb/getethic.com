@@ -9,3 +9,7 @@ Remove these files permanently from git, ASAP
 - `js/libs/require.min.js`
 - `js/libs/respond.min.js`
 - `js/libs/swfobject.js`
+
+Cleanup some of those:
+- 'libs/mejs/*'
+- 'img/*'
