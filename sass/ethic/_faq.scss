@@ -1,6 +1,7 @@
 .faq {
 	
 	.question {
+		position: relative;
 		display: block;
 		border-bottom: 1px solid $bg;
 		padding: 20px;
@@ -8,12 +9,16 @@
 		@include transition(all .2s);
 		
 		span {
-			position: relative;
 			display: block;
 			cursor: pointer;
 			color: $light-blue;
+			margin-right: 20px;
 			
 			@include transition(height .2s $ease-out-quint);
+			
+			@include for-desktop-and-up {
+				margin-right: 0;
+			}
 			
 			&:hover {
 				color: $blue;
@@ -25,23 +30,23 @@
 				position: absolute;
 				background-color: $light-blue;
 				content: '';
-				top: 50%;
-				margin-top: -(5px/2);
+				top: 30px;
+				// margin-top: -(5px/2);
 				height: 1px;
-				width: 10px;
+				width: 11px;
 				
 				@include transition(all .2s $ease-out-quint);
 			}
 			
 			&:before {
-				right: 7px;
+				right: 27px;
 				
 				@include transform(rotate(45deg));
 				
 			}
 			
 			&:after {
-				right: 0;
+				right: 20px;
 				
 				@include transform(rotate(-45deg));
 				
@@ -58,7 +63,7 @@
 			color: $blue;
 			font-family: $font-bold;
 			margin: 0;
-			height: 0;
+			max-height: 0;
 			
 			@include opacity(0);
 			@include transition(all .2s);
@@ -91,8 +96,8 @@
 			}
 			
 			.answer {
-				padding: 10px 0 0 0;
-				height: 100px;
+				padding: 10px 20px 0 0;
+				max-height: 500px;
 				@include opacity(1);
 			}
 		}
