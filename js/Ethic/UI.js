@@ -39,14 +39,13 @@ define(['jquery'], function($) {
 			$('a[href=#register]').click(function (e) {
 				e.preventDefault();
 				e.stopPropagation();
-				$('html, body').animate({
-					scrollTop: $('#register').offset().top
-				}, {
-					easing: 'easeOutCubic',
-					duration: 1500,
-					done: function () {
-			       window.location.hash = '#register';
-			    }
+				window.requestAnimationFrame(function () {
+					$('html, body').animate({
+						scrollTop: $('#register').offset().top
+					}, {
+						easing: 'easeInOutCubic',
+						duration: 2500
+					});
 				});
 			});
 
