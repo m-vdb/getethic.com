@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     uglifyify = require('uglifyify'),
     uglify = require('gulp-uglify');
 
-var bourbonDir = 'js/libs/bourbon/app/assets/stylesheets',
+var bourbonDir = './js/libs/bourbon/app/assets/stylesheets',
     sassDir = './sass/*.scss',
     sassConfig = './config.rb',
     cssDir = 'css',
