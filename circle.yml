@@ -6,7 +6,7 @@ machine:
 
 test:
   override:
-    - gulp compass
+    - gulp
 
 deployment:
   master:
