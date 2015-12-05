@@ -1,5 +1,8 @@
 var gulp = require('gulp'),
-    compass = require('gulp-compass');
+    compass = require('gulp-compass'),
+    browserify = require('browserify'),
+    debowerify = require('debowerify'),
+    source = require('vinyl-source-stream');
 
 var bourbonDir = 'js/libs/bourbon/app/assets/stylesheets',
     sassDir = './sass/*.scss',
@@ -27,4 +30,24 @@ gulp.task('compass:watch', function() {
       task: 'watch'
     }))
     .pipe(gulp.dest(cssDir));
+});
+
+
+gulp.task('build', function() {
+
+  browserify({
+    entries: ['./js/main.js'],
+    debug: true,
+    transform: [debowerify],
+    extensions: ['.js']
+  })
+    .on('error', function(err){
+      console.log(err.message);
+      this.end();
+    })
+    .bundle()
+
+    // Output to the build directory
+    .pipe(source('main.js'))
+    .pipe(gulp.dest('./js/build/'));
 });

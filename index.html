@@ -224,21 +224,6 @@
 		
 	</div>
 	<!-- / page -->
-	
-	<script src="js/libs/jquery/jquery.min.js"></script>
-	<script src="js/libs/requirejs/require.js"></script>
-	<script>
-	(function() {
-		var config = {
-		  baseUrl: 'js/',
-		  urlArgs: 'bust=' +  (new Date()).getTime()
-		};
-		define('config', config);
-		define('jquery', function() {return jQuery});
-		require.config(config);
-		require(['main']);
-	})();
-	</script>
-
+	<script src="js/build/main.js"></script>
 </body>
 </html>
