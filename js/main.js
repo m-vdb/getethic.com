@@ -8,7 +8,6 @@ define([
 	'Ethic/UI',
 	'config',
 
-	'libs/mejs/mediaelement-and-player',
 	'libs/swfobject/swfobject/swfobject',
 	'libs/parsleyjs/dist/parsley.min',
 	'libs/scrollreveal/dist/scrollReveal.min',

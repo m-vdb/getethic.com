@@ -13,3 +13,4 @@ Remove these files permanently from git, ASAP
 Cleanup some of those:
 - 'libs/mejs/*'
 - 'img/*'
+- 'js/plugins/mediaelement.googleanalytics.js'
