@@ -18,8 +18,7 @@
   },
   "scripts": {
     "preinstall": "npm install -g gulp bower",
-    "postinstall": "bower install",
-    "prestart": "gulp",
+    "postinstall": "bower install && gulp",
     "start": "node server.js"
   }
 }
