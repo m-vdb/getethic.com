@@ -15,8 +15,8 @@ COPY . /usr/src/app
 RUN cd /usr/src/app;
 # need to run all of this manually because of npm permissions...
 RUN npm install .
-RUN bower install --allow-root
-RUN gulp
+RUN ./node_modules/bower/bin/bower install --allow-root
+RUN ./node_modules/gulp/bin/gulp.js
 
 EXPOSE 8080
 CMD [ "npm", "start", "--", "--production" ]
