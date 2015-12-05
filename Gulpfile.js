@@ -2,7 +2,8 @@ var gulp = require('gulp'),
     compass = require('gulp-compass'),
     browserify = require('browserify'),
     debowerify = require('debowerify'),
-    source = require('vinyl-source-stream');
+    source = require('vinyl-source-stream'),
+    watch = require('gulp-watch');
 
 var bourbonDir = 'js/libs/bourbon/app/assets/stylesheets',
     sassDir = './sass/*.scss',
@@ -33,8 +34,7 @@ gulp.task('compass:watch', function() {
 });
 
 
-gulp.task('build', function() {
-
+gulp.task('js', function() {
   browserify({
     entries: ['./js/main.js'],
     debug: true,
@@ -51,3 +51,13 @@ gulp.task('build', function() {
     .pipe(source('main.js'))
     .pipe(gulp.dest('./js/build/'));
 });
+
+
+gulp.task('js:watch', function () {
+  gulp.start('js');
+  watch('js/**/*.js', function () {
+    gulp.start('js');
+  });
+});
+
+gulp.task('default', ['compass', 'js']);
