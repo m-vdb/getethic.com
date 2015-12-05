@@ -18,7 +18,7 @@
   },
   "scripts": {
     "preinstall": "npm install -g gulp bower",
-    "postinstall": "bower install --allow-root && gulp",
+    "postinstall": "bower install && gulp",
     "start": "node server.js"
   }
 }
