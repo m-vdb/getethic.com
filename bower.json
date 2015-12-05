@@ -8,6 +8,7 @@
     "modernizr": "2.6.2",
     "swfobject": "*",
     "parsleyjs": "~2.1.3",
-    "scrollreveal": "scroll-reveal#~2.3.2"
+    "scrollreveal": "scroll-reveal#~2.3.2",
+    "placeholders": "~4.0.1"
   }
 }

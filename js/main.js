@@ -11,7 +11,7 @@ define([
 	'libs/swfobject/swfobject/swfobject',
 	'libs/parsleyjs/dist/parsley.min',
 	'libs/scrollreveal/dist/scrollReveal.min',
-	'plugins/placeholders',
+	'libs/placeholders/dist/placeholders.min',
 	'plugins/jquery-ui.effects'
 	
 ], function(UI, config) {
