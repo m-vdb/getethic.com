@@ -3,13 +3,19 @@ var gulp = require('gulp'),
     browserify = require('browserify'),
     debowerify = require('debowerify'),
     source = require('vinyl-source-stream'),
-    watch = require('gulp-watch');
+    watch = require('gulp-watch'),
+    uglifyify = require('uglifyify');
 
 var bourbonDir = 'js/libs/bourbon/app/assets/stylesheets',
     sassDir = './sass/*.scss',
     sassConfig = './config.rb',
-    cssDir = 'css';
- 
+    cssDir = 'css',
+    browserifyTransforms = [debowerify];
+
+if (process.env.MINIFY_JS == '1') {
+  browserifyTransforms.push(uglifyify);
+}
+
 gulp.task('compass', function() {
   gulp.src(sassDir)
     .pipe(compass({
@@ -38,7 +44,7 @@ gulp.task('js', function() {
   browserify({
     entries: ['./js/main.js'],
     debug: true,
-    transform: [debowerify],
+    transform: browserifyTransforms,
     extensions: ['.js']
   })
     .on('error', function(err){
