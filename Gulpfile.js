@@ -4,15 +4,17 @@ var gulp = require('gulp'),
     debowerify = require('debowerify'),
     source = require('vinyl-source-stream'),
     watch = require('gulp-watch'),
-    uglifyify = require('uglifyify');
+    uglifyify = require('uglifyify'),
+    uglify = require('gulp-uglify');
 
 var bourbonDir = 'js/libs/bourbon/app/assets/stylesheets',
     sassDir = './sass/*.scss',
     sassConfig = './config.rb',
     cssDir = 'css',
-    browserifyTransforms = [debowerify];
+    browserifyTransforms = [debowerify],
+    minifyJs = process.env.MINIFY_JS == '1';
 
-if (process.env.MINIFY_JS == '1') {
+if (minifyJs) {
   browserifyTransforms.push(uglifyify);
 }
 
@@ -55,6 +57,13 @@ gulp.task('js', function() {
 
     // Output to the build directory
     .pipe(source('main.js'))
+    .pipe(gulp.dest('./js/build/'));
+
+  var stream = gulp.src('./js/libs/modernizr/modernizr.js');
+  if (minifyJs) {
+    stream = stream.pipe(uglify());
+  }
+  stream
     .pipe(gulp.dest('./js/build/'));
 });
 
