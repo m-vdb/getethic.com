@@ -21,6 +21,15 @@ $ gem install compass
 
 You can now use the following commands:
 ```bash
-$ gulp compass  # will compile the sass files into css
+$ gulp  # will compile the sass files into css, and bundle the javascript files
 $ gulp compass:watch  # will watch your sass files for changes and compile them
+$ gulp js:watch # will watch your js files for changes and bundle them
 ```
+
+## Up and running
+
+The only thing to do to access to the website locally is the following:
+```bash
+$ npm start
+```
+Then open [http://localhost:8080](http://localhost:8080) in your browser.

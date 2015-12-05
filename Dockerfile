@@ -1,6 +1,8 @@
 FROM node:4.2
 MAINTAINER m-vdb
 
+ENV MINIFY_JS=1
+
 # install ruby and compass
 RUN apt-get update
 RUN apt-get install -y ruby-full
