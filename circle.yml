@@ -12,6 +12,11 @@ deployment:
   master:
     branch: master
     commands:
-      - docker build -t $DOCKER_REPO:master .
-      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker push $DOCKER_REPO:master
+      - git remote add dokku-demo dokku@getethic.com:demo
+      - git push dokku-demo master
+
+  production:
+    branch: production
+    commands:
+      - git remote add dokku-production dokku@getethic.com:beta
+      - git push dokku-production production:master
