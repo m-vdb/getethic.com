@@ -41,10 +41,9 @@ gulp.task('compass:watch', function() {
     .pipe(gulp.dest(cssDir));
 });
 
-
-gulp.task('js', function() {
+function bundle(sourceFileName) {
   browserify({
-    entries: ['./public/js/main.js'],
+    entries: ['./public/js/' + sourceFileName],
     debug: true,
     transform: browserifyTransforms,
     extensions: ['.js']
@@ -56,8 +55,13 @@ gulp.task('js', function() {
     .bundle()
 
     // Output to the build directory
-    .pipe(source('main.js'))
+    .pipe(source(sourceFileName))
     .pipe(gulp.dest('./public/js/build/'));
+}
+
+gulp.task('js', function() {
+  bundle('main.js');
+  bundle('faq.js');
 
   var stream = gulp.src('./public/js/libs/modernizr/modernizr.js');
   if (minifyJs) {

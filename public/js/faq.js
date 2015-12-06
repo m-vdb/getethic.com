@@ -6,8 +6,8 @@ require('placeholders');
 require('./Ethic/scroll.js');
 var UI = require('./Ethic/UI.js');
 var nav = require('./Ethic/nav.js');
-var register = require('./Ethic/register.js');
+var faq = require('./Ethic/faq.js');
 
 UI.init();
 nav.init();
-register.init();
+faq.init();
