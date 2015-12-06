@@ -1,12 +1,21 @@
-var express = require('express');
+var express = require('express'),
+    form = require('express-form'),
+    bodyParser = require('body-parser'),
+    field = form.field,
+    mongoose = require('mongoose'),
+    config = require('config');
+
+var BetaUser = require('./models/beta-user.js');
+
 const PORT = 8080;
 
 var app = express();
 
-// configure view folders
+// configuration
 app.set('views', './views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
+app.use(bodyParser.urlencoded({extended: false}));
 
 // serve static files
 app.use(express.static('public'));
@@ -21,7 +30,25 @@ app.get('/faq', function (req, res) {
 app.get('/how-to-get-started', function (req, res) {
   res.render('how-to-get-started.html');
 });
+app.get('/thanks', function (req, res) {
+  res.render('thanks.html');
+});
+app.post(
+  '/register-beta',
+  form(field("email").trim().isEmail()),
+  function (req, res) {
+  if (!req.form.isValid) {
+    res.redirect('/#error');
+  } else {
+    var user = new BetaUser(req.form);
+    user.save(function (err) {
+      res.redirect(err ? '/#error' : '/thanks');
+    });
+  }
+});
 
+// start services
+mongoose.connect(config.get('mongo.uri'), config.get('mongo.options'));
 app.listen(PORT, '0.0.0.0', function () {
   console.log("Server listening on: http://localhost:%s", PORT);
 });
