@@ -23,6 +23,12 @@ app.use(cookieParser());
 // serve static files
 app.use(express.static('public'));
 
+// template context
+app.use(function (req, res, next) {
+  res.locals.path = req.path;
+  next();
+});
+
 // routes
 app.get('/', csrfProtection, function (req, res) {
   res.render('index.html', {csrfToken: req.csrfToken()});
