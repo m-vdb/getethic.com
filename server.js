@@ -1,7 +1,8 @@
 var express = require('express'),
     form = require('express-form'),
     bodyParser = require('body-parser'),
-    field = form.field,
+    cookieParser = require('cookie-parser'),
+    csrf = require('csurf'),
     mongoose = require('mongoose'),
     config = require('config');
 
@@ -10,32 +11,44 @@ var BetaUser = require('./models/beta-user.js');
 const PORT = 8080;
 
 var app = express();
+var csrfProtection = csrf({cookie: true});
 
 // configuration
 app.set('views', './views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(cookieParser());
 
 // serve static files
 app.use(express.static('public'));
 
+// template context
+app.use(function (req, res, next) {
+  res.locals.path = req.path;
+  next();
+});
+
 // routes
-app.get('/', function (req, res) {
-  res.render('index.html');
+app.get('/', csrfProtection, function (req, res) {
+  res.render('index.html', {csrfToken: req.csrfToken()});
 });
-app.get('/faq', function (req, res) {
-  res.render('faq.html');
+app.get('/faq', csrfProtection, function (req, res) {
+  res.render('faq.html', {csrfToken: req.csrfToken()});
 });
-app.get('/how-to-get-started', function (req, res) {
-  res.render('how-to-get-started.html');
+app.get('/how-to-get-started', csrfProtection, function (req, res) {
+  res.render('how-to-get-started.html', {csrfToken: req.csrfToken()});
 });
 app.get('/thanks', function (req, res) {
   res.render('thanks.html');
 });
 app.post(
   '/register-beta',
-  form(field("email").trim().isEmail()),
+  // parse the form and validate
+  form(form.field("email").trim().isEmail()),
+  // CSRF protection
+  csrfProtection,
+  // handler
   function (req, res) {
   if (!req.form.isValid) {
     res.redirect('/#error');
