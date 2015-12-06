@@ -1,0 +1,9 @@
+{
+  "mongo": {
+    "uri": "MONGO_URI",
+    "options": {
+      "user": "MONGO_USER",
+      "password": "MONGO_PASSWORD"
+    }
+  }
+}
