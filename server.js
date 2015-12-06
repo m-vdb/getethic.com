@@ -40,9 +40,10 @@ app.post(
   if (!req.form.isValid) {
     res.redirect('/#error');
   } else {
-    console.log("Email:", req.form.email);
-    // TODO save in database
-    res.redirect('/thanks');
+    var user = new BetaUser(req.form);
+    user.save(function (err) {
+      res.redirect(err ? '/#error' : '/thanks');
+    });
   }
 });
 
