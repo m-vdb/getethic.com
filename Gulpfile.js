@@ -7,10 +7,10 @@ var gulp = require('gulp'),
     uglifyify = require('uglifyify'),
     uglify = require('gulp-uglify');
 
-var bourbonDir = './js/libs/bourbon/app/assets/stylesheets',
+var bourbonDir = './public/js/libs/bourbon/app/assets/stylesheets',
     sassDir = './sass/*.scss',
     sassConfig = './config.rb',
-    cssDir = 'css',
+    cssDir = './public/css',
     browserifyTransforms = [debowerify],
     minifyJs = process.env.MINIFY_JS == '1';
 
@@ -23,7 +23,7 @@ gulp.task('compass', function() {
     .pipe(compass({
       config_file: sassConfig,
       import_path: [bourbonDir],
-      css: 'css',
+      css: 'public/css',
       sass: 'sass'
     }))
     .pipe(gulp.dest(cssDir));
@@ -34,7 +34,7 @@ gulp.task('compass:watch', function() {
     .pipe(compass({
       config_file: sassConfig,
       import_path: [bourbonDir],
-      css: 'css',
+      css: 'public/css',
       sass: 'sass',
       task: 'watch'
     }))
@@ -44,7 +44,7 @@ gulp.task('compass:watch', function() {
 
 gulp.task('js', function() {
   browserify({
-    entries: ['./js/main.js'],
+    entries: ['./public/js/main.js'],
     debug: true,
     transform: browserifyTransforms,
     extensions: ['.js']
@@ -57,20 +57,20 @@ gulp.task('js', function() {
 
     // Output to the build directory
     .pipe(source('main.js'))
-    .pipe(gulp.dest('./js/build/'));
+    .pipe(gulp.dest('./public/js/build/'));
 
-  var stream = gulp.src('./js/libs/modernizr/modernizr.js');
+  var stream = gulp.src('./public/js/libs/modernizr/modernizr.js');
   if (minifyJs) {
     stream = stream.pipe(uglify());
   }
   stream
-    .pipe(gulp.dest('./js/build/'));
+    .pipe(gulp.dest('./public/js/build/'));
 });
 
 
 gulp.task('js:watch', function () {
   gulp.start('js');
-  watch('js/**/*.js', function () {
+  watch('public/js/**/*.js', function () {
     gulp.start('js');
   });
 });

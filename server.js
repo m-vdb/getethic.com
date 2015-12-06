@@ -3,7 +3,7 @@ var http = require('http'),
 const PORT = 8080;
 
 // we want to server everything
-var file = new static.Server('.');
+var file = new static.Server('./public');
 
 http.createServer(function (request, response) {
     request.addListener('end', function () {
