@@ -21,6 +21,10 @@ app.get('/faq', function (req, res) {
 app.get('/how-to-get-started', function (req, res) {
   res.render('how-to-get-started.html');
 });
+app.get('/thanks', function (req, res) {
+  res.render('thanks.html');
+});
+
 
 app.listen(PORT, '0.0.0.0', function () {
   console.log("Server listening on: http://localhost:%s", PORT);
