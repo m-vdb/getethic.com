@@ -74,7 +74,7 @@ gulp.task('js', function() {
 
 gulp.task('js:watch', function () {
   gulp.start('js');
-  watch('public/js/**/*.js', function () {
+  watch(['public/js/**/*.js', '!public/js/build/*'], function () {
     gulp.start('js');
   });
 });

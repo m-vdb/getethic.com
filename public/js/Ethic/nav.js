@@ -19,7 +19,7 @@ module.exports = {
         if(!UI.$body.hasClass('visible')) { 
           e.stopPropagation();
         }
-        
+
         UI.$body.toggleClass('visible');
 
         $('.overlay').on('click', closeHandler);
