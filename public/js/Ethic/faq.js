@@ -6,15 +6,19 @@ module.exports = {
     if (UI.$faq.length) {
       UI.$faq.find('.js-faq-item-link').on('click', function(e) {
         e.preventDefault();
-        var expandedOnes = UI.$faq.filter('.expanded');
+        var $question = $(this).closest(UI.$faq),
+            expandedOnes = UI.$faq.filter('.expanded');
 
         // open the right one
-        $(this).closest(UI.$faq).toggleClass('expanded');
+        $question.toggleClass('expanded');
 
         // close everything that we opened
-        expandedOnes.each(function () {
-          $(this).closest(UI.$faq).toggleClass('expanded');
-        });
+        // only if we're opening an item
+        if ($question.hasClass('expanded')) {
+          expandedOnes.each(function () {
+            $(this).closest(UI.$faq).toggleClass('expanded');
+          });
+        }
       });
     }
   }
