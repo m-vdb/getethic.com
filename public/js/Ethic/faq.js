@@ -4,9 +4,21 @@ var UI = require('./UI.js');
 module.exports = {
   init: function () {
     if (UI.$faq.length) {
-      UI.$faq.find('span').on('click', function(e) {
+      UI.$faq.find('.js-faq-item-link').on('click', function(e) {
         e.preventDefault();
-        $(this).closest(UI.$faq).toggleClass('expanded');
+        var $question = $(this).closest(UI.$faq),
+            expandedOnes = UI.$faq.filter('.expanded');
+
+        // open the right one
+        $question.toggleClass('expanded');
+
+        // close everything that we opened
+        // only if we're opening an item
+        if ($question.hasClass('expanded')) {
+          expandedOnes.each(function () {
+            $(this).closest(UI.$faq).toggleClass('expanded');
+          });
+        }
       });
     }
   }

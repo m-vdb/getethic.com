@@ -8,16 +8,20 @@
 		
 		@include transition(all .2s);
 		
+		ul {
+			margin: 0;
+		}
+		
 		span {
 			display: block;
 			cursor: pointer;
 			color: $light-blue;
-			margin-right: 20px;
+			margin: 0 20px 0 0;
 			
 			@include transition(height .2s $ease-out-quint);
 			
 			@include for-desktop-and-up {
-				margin-right: 0;
+				margin: 0;
 			}
 			
 			&:hover {
@@ -62,6 +66,7 @@
 			text-align: left;
 			color: $blue;
 			font-family: $font-bold;
+			padding: 0 20px 0 0;
 			margin: 0;
 			max-height: 0;
 			
@@ -96,7 +101,7 @@
 			}
 			
 			.answer {
-				padding: 10px 20px 0 0;
+				padding: 20px 20px 20px 0;
 				max-height: 500px;
 				@include opacity(1);
 			}
