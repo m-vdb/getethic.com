@@ -1,6 +1,8 @@
 .hero {
 	position: relative;
 	background-color: $very-light-gray;
+	// background: url(../img/mocks/san-francisco.jpg) no-repeat center center fixed;
+	// background-size: auto 100%;
 	// border-bottom: 1px solid $light-blue;
 	overflow: hidden;
 	min-height: 300px;
@@ -16,6 +18,7 @@
 	
 	.home & {
 		background-color: $black;
+		// height: 600px;
 	}
 		
 	.hero-banner {
