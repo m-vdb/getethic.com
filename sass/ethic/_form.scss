@@ -6,7 +6,9 @@
 	a {
 		display: block;
 		text-decoration: underline;
-		margin-top: 50px;
+		text-align: center;
+		margin: auto;
+		width: 15%;
 	}
 	
 }
@@ -24,7 +26,7 @@ fieldset {
 	border: 0;
 	outline: none;
 	padding: 0;
-	margin: 0;
+	margin: 0 0 50px 0;
 	
 	@include for-tablet-and-up {
 		background-color: $mid-blue;
