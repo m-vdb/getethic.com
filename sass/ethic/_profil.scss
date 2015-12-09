@@ -16,27 +16,50 @@
 		
 	&:nth-child(odd) {
 		ul {
-			text-align: right;
-			left: 10px;
-			
 			&:before {
-				right: -150px;
+				left: -150px; 
 			}
 			
 			&:after {
-				right: -30px;
+				left: -30px;
+			}
+			
+			@include for-desktop-and-up {
+				text-align: right;
+				left: 10px;
+				
+				&:before {
+					left: 250px;
+				}
+				
+				&:after {
+					left: 240px;
+				}
 			}
 		}
 	}
 	
 	ul {
-		position: absolute;
+		display: block;
 		list-style: none;
-		right: 10px;
-		top: 50%;
 		padding: 0;
-		margin-top: -(154px/2);
-		width: 220px;
+		width: 100%;
+		
+		@include for-mobile-only {
+			text-align: center;
+		}
+		
+		@include for-tablet-and-up {
+			position: absolute;
+			right: 46px;
+			top: 50%;
+			margin-top: -(132px/2);
+			width: 220px;
+		}
+		
+		@include for-desktop-and-up {
+			right: 10px;
+		}
 		
 		&:before {
 			position: absolute;
@@ -77,6 +100,10 @@
 	width: 260px;
 	
 	@include border-radius(260px);
+	
+	@include for-tablet-only {
+		margin: 0 80px;
+	}
 	
 	img {
 		z-index: 1;
