@@ -1,16 +1,15 @@
-.availability {
-	background-color: $blue;
-	color: $white;
-	padding: 30px 0;
-	
+#register {	
 	a {
 		display: block;
 		text-decoration: underline;
 		text-align: center;
 		margin: auto;
-		width: 15%;
+		width: 40%;
+		
+		@include for-tablet-and-up {
+			width: 15%;
+		}
 	}
-	
 }
 
 form {

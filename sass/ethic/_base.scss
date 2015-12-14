@@ -43,7 +43,7 @@ h2 {
 		font-size: 30px;
 	}
 	
-	.availability & {
+	.blue & {
 		color: $white;
 	}
 	
@@ -55,7 +55,7 @@ h2 {
 		height: 1px;
 		width: 75px;
 		
-		.availability & {
+		.blue & {
 			background-color: $white;
 		}
 	}
@@ -118,6 +118,12 @@ p {
 		z-index: 99;
 		@include opacity(.8);
 	}
+}
+
+.blue {
+	background-color: $blue;
+	color: $white;
+	padding: 30px 0;
 }
 
 .wrapper {

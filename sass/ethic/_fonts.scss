@@ -10,6 +10,18 @@
   font-style:normal;
 }
 
+// Font - Italic
+@font-face{
+  font-family:"Font Italic";
+  src:url("../fonts/OpenSans-italic-webfont.eot?#iefix");
+  src:url("../fonts/OpenSans-italic-webfont.eot?#iefix") format("eot"),
+    url("../fonts/OpenSans-italic-webfont.svg") format("svg"),
+    url("../fonts/OpenSans-italic-webfont.woff") format("woff"),
+    url("../fonts/OpenSans-italic-webfont.ttf") format("truetype");
+  font-weight:normal;
+  font-style:normal;
+}
+
 // Font - Semi Bold
 @font-face{
 	font-family:"Font Semi Bold";
