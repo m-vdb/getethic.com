@@ -135,6 +135,10 @@
 		
 		@include transition(all 1s .3s $ease-out-quint);
 		
+		&:first-child {
+			@include transition(all 1s .2s $ease-out-quint);
+		}
+		
 		&:last-child {
 			@include transition(all 1s .4s $ease-out-quint);
 		}

@@ -1,9 +1,6 @@
 .hero {
 	position: relative;
 	background-color: $very-light-gray;
-	// background: url(../img/mocks/san-francisco.jpg) no-repeat center center fixed;
-	// background-size: auto 100%;
-	// border-bottom: 1px solid $light-blue;
 	overflow: hidden;
 	min-height: 300px;
 	height: 100vh;
@@ -12,17 +9,14 @@
 		height: auto;
 	}
 	
-	@include for-desktop-and-up {
-		max-height: 600px;
-	}
-	
 	.home & {
 		background-color: $black;
-		// height: 600px;
 	}
 		
 	.hero-banner {
 		display: block;
+		background: url(../img/mocks/m_san-francisco.jpg) no-repeat center center;
+		background-size: auto 100vh;
 		
 		@include for-mobile-only {
 			height: 100%;
@@ -30,6 +24,17 @@
 			max-width: auto;	
 		}
 		
+		@include for-tablet-and-up {
+			background: url(../img/mocks/san-francisco.jpg) no-repeat;
+			background-size: 100% auto;
+			min-height: 500px;
+		}
+		
+		@include for-desktop-and-up {
+			min-height: 600px;
+		}
+		
+		@include hide-text;
 		@include opacity(.5);
 	}
 	
