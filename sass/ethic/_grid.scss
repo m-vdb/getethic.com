@@ -23,7 +23,10 @@
 		@extend %tablet-layout-grid;
 	}
 
-	.box {
+	.box2 {
+		@extend %tablet-layout-cell-6;
+	}
+	.box3 {
 		@extend %tablet-layout-cell-4;
 	}
 }
