@@ -1,14 +1,14 @@
 .menu {
-	position: fixed;
+	position: absolute;
 	z-index: 999;
 	text-align: center;
-	top: 35px;
+	top: 40px;
 	right: 16px;
 	
 	@include transition(all 1s $ease-out-quint);
 	
 	.visible & {
-		right: 135px;
+		right: -162px;
 		
 		@include transform(rotate(180deg));
 		
@@ -22,6 +22,10 @@
 			margin-top: -10px;
 			@include transform(rotate(-45deg));
 		}
+	}
+	
+	.sticky & {
+		position: fixed;
 	}
 	
 	@include for-tablet-and-up {
@@ -96,7 +100,7 @@
 		background-color: $white;
 	}
 	
-	.bgscroll & {
+	.sticky & {
 		background-color: $light-blue;
 	}
 	
