@@ -4,27 +4,27 @@ var UI = require('./UI.js');
 
 // Scroll Reveal
 window.sr = window.sr || new scrollReveal({
-  mobile: false
+  mobile: false,
 });
 
 // Add class scroll
-var bgscroll = function () {
-  var $sd = UI.$nav;
+var sticky = function () {
+  var $sticky = UI.$page;
     
   if (UI.$window.scrollTop() > 450) {
-    $sd.addClass('bgscroll');
+    $sticky.addClass('sticky');
   } else {
-    $sd.removeClass('bgscroll');
+    $sticky.removeClass('sticky');
   }
     
   if (Modernizr.mq('only screen and (min-width: 800px)')) {
 
-    if (UI.$window.scrollTop() > 558) {
-      $sd.addClass('bgscroll');
+    if (UI.$window.scrollTop() > 300) {
+      $sticky.addClass('sticky');
     } else {
-      $sd.removeClass('bgscroll');
+      $sticky.removeClass('sticky');
     }
   }
 
 };
-UI.onscroll(bgscroll);
+UI.onscroll(sticky);
