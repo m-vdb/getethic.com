@@ -7,12 +7,13 @@
 	
 	@include transition(all 1s $ease-out-quint);
 	
+	.visible &,
+	.sticky & {
+		position: fixed;
+	}
+		
 	.visible & {
 		right: 135px;
-		
-		@include for-tablet-and-up {
-			right: -162px;
-		}
 		
 		@include transform(rotate(180deg));
 		
@@ -26,10 +27,6 @@
 			margin-top: -10px;
 			@include transform(rotate(-45deg));
 		}
-	}
-	
-	.sticky & {
-		position: fixed;
 	}
 	
 	@include for-tablet-and-up {
