@@ -19,7 +19,7 @@ var sticky = function () {
     
   if (Modernizr.mq('only screen and (min-width: 800px)')) {
 
-    if (UI.$window.scrollTop() > 558) {
+    if (UI.$window.scrollTop() > 300) {
       $sticky.addClass('sticky');
     } else {
       $sticky.removeClass('sticky');
