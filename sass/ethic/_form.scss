@@ -101,6 +101,11 @@ button {
 			background-color: $mid-blue;
 		}
 	}
+	
+	&.claims {
+		margin: 50px auto auto;
+		height: 20px;
+	}
 }
 
 .btn,
