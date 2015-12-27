@@ -1,0 +1,30 @@
+.claims {
+	position: relative;
+	// overflow: hidden;
+	// height: 300px;
+	
+	@include for-desktop-and-up {
+		height: 404px;
+	}
+	
+	.small,
+	.large {
+		@include transition(opacity .2s);
+	}
+	
+	.large {
+		position: absolute;
+		top: 0;
+		height: 0;
+		width: 100%;
+		@include opacity(0);
+	}
+	
+	&:hover {
+		
+		.large {
+			height: 404px;
+			@include opacity(1);
+		}
+	}
+}
