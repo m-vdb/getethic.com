@@ -52,6 +52,10 @@
 	.sticky & {
 		position: fixed;
 		
+		.visible & {
+			position: absolute;
+		}
+		
 		&:before {
 			margin-top: 0;
 			

@@ -5,7 +5,11 @@
 	top: 40px;
 	right: 16px;
 	
-	@include transition(all 1s $ease-out-quint);
+	@include transition(all .3s $ease-out-quint);
+	
+	@include for-desktop-and-up {
+		@include transition(all 1s $ease-out-quint);
+	}
 	
 	.visible &,
 	.sticky & {
@@ -128,7 +132,11 @@
 	margin: 0 -300px 0 0;
 	width: 300px;
 	
-	@include transition(all 1s $ease-out-quint);
+	@include transition(all .3s $ease-out-quint);
+	
+	@include for-desktop-and-up {
+		@include transition(all 1s $ease-out-quint);
+	}
 	
 	.visible & {
 		z-index: 990;
@@ -138,14 +146,26 @@
 	li {
 		margin-right: -300px;
 		
-		@include transition(all 1s .3s $ease-out-quint);
+		@include transition(all .3s .1s $ease-out-quint);
 		
 		&:first-child {
-			@include transition(all 1s .2s $ease-out-quint);
+			@include transition(all .3s $ease-out-quint);
 		}
 		
 		&:last-child {
-			@include transition(all 1s .4s $ease-out-quint);
+			@include transition(all .3s .2s $ease-out-quint);
+		}
+		
+		@include for-desktop-and-up {
+			@include transition(all 1s .3s $ease-out-quint);
+		
+			&:first-child {
+				@include transition(all 1s .2s $ease-out-quint);
+			}
+			
+			&:last-child {
+				@include transition(all 1s .4s $ease-out-quint);
+			}
 		}
 		
 		.visible & {

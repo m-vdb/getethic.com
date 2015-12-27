@@ -90,12 +90,16 @@ p {
 	position:relative;
 	right: 0;
 	
-	@include transition(all 1s $ease-out-quint);
+	@include transition(all .3s $ease-out-quint);
 	
 	@include clearfix;
 
 	@include for-mobile-only {
 		min-width:320px;
+	}
+	
+	@include for-desktop-and-up {
+		@include transition(all 1s $ease-out-quint);
 	}
 	
 	.visible & {
