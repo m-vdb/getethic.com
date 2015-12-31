@@ -12,11 +12,11 @@ deployment:
   master:
     branch: master
     commands:
-      - git remote add dokku-demo dokku@getethic.com:demo
+      - git remote add dokku-demo dokku@$DOKKU_SERVER_IP:demo
       - git push dokku-demo master
 
   production:
     branch: production
     commands:
-      - git remote add dokku-production dokku@getethic.com:beta
+      - git remote add dokku-production dokku@$DOKKU_SERVER_IP:beta
       - git push dokku-production production:master
