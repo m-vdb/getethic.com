@@ -1,0 +1,74 @@
+.slider {
+	display: block;
+	position: relative;
+	background-color: $white;
+	border: 2px solid $blue;
+	color: $blue;
+	padding: 10px 0;
+	margin: 30px auto;
+	width: 200px;
+	
+	@include border-radius(40px);
+	
+	@include transition(all .2s);
+	
+	.handle {
+		display: block;
+		position: absolute;
+		background-color: $white;
+		border: 2px solid $blue;
+		cursor: pointer;
+		top: 2px;
+		left: 2px;
+		margin-left: 0;
+		height: 31px;
+		width: 31px;
+		
+		@include border-radius(30px);
+		@include transition(all .2s);
+		
+		@include for-desktop-and-up {
+			height: 34px;
+			width: 34px;
+			
+			&:hover {
+				background-color: $blue;
+			}
+		}
+	}
+	
+	.active & {
+		background-color: $blue;
+		color: $white;
+		
+		.handle {
+			border: 2px solid $white;
+			margin-left: 161px;	
+			
+			@include for-desktop-and-up {
+				margin-left: 157px;
+			}
+		}
+		
+		.slider-small {
+			display: none;
+		}
+		
+		.slider-large {
+			display: block;
+		}
+	}
+	
+	.slider-small,
+	.slider-large {
+		text-align: center;
+	}
+	
+	.slider-small {
+		display: block;
+	}
+	
+	.slider-large {
+		display: none;
+	}
+}
