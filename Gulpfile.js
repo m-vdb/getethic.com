@@ -12,10 +12,11 @@ var bourbonDir = './public/js/libs/bourbon/app/assets/stylesheets',
     sassConfig = './config.rb',
     cssDir = './public/css',
     browserifyTransforms = [debowerify],
-    minifyJs = process.env.MINIFY_JS == '1';
+    minifyJs = process.env.MINIFY_JS == '1',
+    browserifyDebug = !minifyJs;
 
 if (minifyJs) {
-  browserifyTransforms.push(uglifyify);
+  browserifyTransforms.push([uglifyify, {sourcemap: false}]);
 }
 
 gulp.task('compass', function() {
@@ -44,7 +45,7 @@ gulp.task('compass:watch', function() {
 function bundle(sourceFileName) {
   browserify({
     entries: ['./public/js/' + sourceFileName],
-    debug: true,
+    debug: browserifyDebug,
     transform: browserifyTransforms,
     extensions: ['.js']
   })
