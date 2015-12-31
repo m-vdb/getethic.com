@@ -18,6 +18,7 @@ var UI = {
 		UI.$video = 				$('video');
 		UI.$nav = 					$('.menu');
 		UI.$page = 					$('.page');
+		UI.$slider = 				$('.claims');
 		UI.$faq = 					$('.question');
 
 
