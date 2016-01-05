@@ -1,9 +1,6 @@
 .claims {
 	position: relative;
-	
-	@include for-desktop-and-up {
-		height: 500px;
-	}
+	margin-bottom: 100px;
 	
 	.small,
 	.large {
