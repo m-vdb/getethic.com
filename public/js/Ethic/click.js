@@ -6,4 +6,3 @@ module.exports = {
     FastClick.attach(document.body);
   }
 };
-
