@@ -1,8 +1,10 @@
-var fastclick = require('fastclick');
+var attachFastClick = require('fastclick');
 
 // Fastclick
 module.exports = {
   init: function () {
-    FastClick.attach(document.body);
+    $(function() {
+      attachFastClick(document.body);
+    });
   }
 };
