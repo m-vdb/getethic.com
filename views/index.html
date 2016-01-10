@@ -37,7 +37,13 @@
 		<div class="hero">
 			<div class="hero-baseline">
 				<h1 data-sr="enter top, move 10px, over 1s"><strong>Mutual coverage, the new way.</strong></h1>
-				<a href="#register" title="Enjoy early access!" class="btn" data-sr="enter top, move 10px, over 1s, wait 0.2s">Enjoy early access! <img src="img/svg/arrow-white.svg" alt="arrow" class="arrow" /></a>
+				<form class="form" action="/register-beta" method="post" data-parsley-validate>
+	        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+	        <fieldset>
+	          <input type="email" name="email" placeholder="Your email" required data-required="true" data-trigger="change" data-parsley-type="email"/>
+	          <button type="submit"><i class="send"></i></button>
+	        </fieldset>
+	      </form>
 			</div>
 			<div class="hero-banner">San Francisco</div>
 		</div>
