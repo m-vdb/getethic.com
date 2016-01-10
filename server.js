@@ -31,16 +31,28 @@ app.use(function (req, res, next) {
 
 // routes
 app.get('/', csrfProtection, function (req, res) {
-  res.render('index.html', {csrfToken: req.csrfToken(), zopimId: config.get('zopim_id')});
+  res.render('index.html', {
+    csrfToken: req.csrfToken(),
+    zopimId: config.get('zopim_id'),
+    heapId: config.get('heap_id')
+  });
 });
 app.get('/faq', csrfProtection, function (req, res) {
-  res.render('faq.html', {csrfToken: req.csrfToken()});
+  res.render('faq.html', {
+    csrfToken: req.csrfToken(),
+    heapId: config.get('heap_id')
+  });
 });
 app.get('/how-to-get-started', csrfProtection, function (req, res) {
-  res.render('how-to-get-started.html', {csrfToken: req.csrfToken()});
+  res.render('how-to-get-started.html', {
+    csrfToken: req.csrfToken(),
+    heapId: config.get('heap_id')
+  });
 });
 app.get('/thanks', function (req, res) {
-  res.render('thanks.html');
+  res.render('thanks.html', {
+    heapId: config.get('heap_id')
+  });
 });
 app.post(
   '/register-beta',
