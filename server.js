@@ -31,7 +31,7 @@ app.use(function (req, res, next) {
 
 // routes
 app.get('/', csrfProtection, function (req, res) {
-  res.render('index.html', {csrfToken: req.csrfToken()});
+  res.render('index.html', {csrfToken: req.csrfToken(), zopimId: config.get('zopim_id')});
 });
 app.get('/faq', csrfProtection, function (req, res) {
   res.render('faq.html', {csrfToken: req.csrfToken()});
