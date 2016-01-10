@@ -5,5 +5,6 @@
       "user": "MONGO_USER",
       "pass": "MONGO_PASSWORD"
     }
-  }
+  },
+  "zopim_id": "ZOPIM_ID"
 }

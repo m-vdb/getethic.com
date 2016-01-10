@@ -2,5 +2,6 @@
   "mongo": {
     "uri": "mongodb://localhost/ethic",
     "options": {}
-  }
+  },
+  "zopim_id": "test"
 }
