@@ -3,5 +3,6 @@
     "uri": "mongodb://localhost/ethic",
     "options": {}
   },
-  "zopim_id": "test"
+  "zopim_id": "",
+  "heap_id": ""
 }
