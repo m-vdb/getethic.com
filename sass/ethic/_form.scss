@@ -51,7 +51,7 @@ label {
 	}
 }
 
-input[type="email"]:focus + label {
+input[type="email"].input--filled + label {
 	top: 20%;
 	font-size: 11px;
 	
