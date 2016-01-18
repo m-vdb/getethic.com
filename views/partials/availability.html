@@ -6,7 +6,8 @@
       <form class="form" action="/register-beta" method="post" data-parsley-validate>
         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
         <fieldset>
-          <input type="email" name="email" placeholder="Your email" required data-required="true" data-trigger="change" data-parsley-type="email"/>
+          <input type="email" name="email" id="subscriber" required data-required="true" data-trigger="change" data-parsley-type="email"/>
+          <label id="subscriber">Your email</label>
           <button type="submit"><i class="send"></i></button>
         </fieldset>
       </form>

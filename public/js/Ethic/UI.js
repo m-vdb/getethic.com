@@ -38,6 +38,17 @@ var UI = {
 			}
 		}, 250);
 
+		// inputs focus/blur handlers
+		$('input[type="email"]').focus(function () {
+			$(this).addClass('input--filled');
+		});
+		$('input[type="email"]').blur(function () {
+			var $this = $(this);
+			if ($this.val().trim() === '') {
+				$this.removeClass('input--filled');
+			}
+		});
+
 	},
 	onscroll: function(callback) {
 		onscrollCallbacks.push(callback);
