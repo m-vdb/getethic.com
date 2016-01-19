@@ -6,12 +6,12 @@
       <form class="form" action="/register-beta" method="post" data-parsley-validate>
         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
         <fieldset>
-          <input type="email" name="email" id="subscriber" required data-required="true" data-trigger="change" data-parsley-type="email"/>
+          <input type="email" name="email" id="subscriber" required data-required="true" data-trigger="change" data-parsley-type="email" class="js-register-email"/>
           <label id="subscriber">Your email</label>
-          <button type="submit"><i class="send"></i></button>
+          <button type="submit"><i class="send js-register-submit"></i></button>
         </fieldset>
       </form>
-      <a href="/faq" title="Have a question?"><small>Have a question?</small></a>
+      <a href="/faq" title="Have a question?" class="js-have-question"><small>Have a question?</small></a>
     </div>
   </div>
 </section>
