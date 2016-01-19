@@ -29,11 +29,7 @@
 		<div class="overlay"></div>
 
 		<!-- heading -->
-		<div class="heading">
-			<header class="header">
-				<a class="logo" href="/" title="Ethic"><strong>Ethic</strong></a>
-			</div>
-		</header>
+		<% include partials/heading.html %>
 		<!-- / heading -->
 
 		<!-- mutual coverage -->
@@ -84,21 +80,11 @@
 		<!-- footer -->
 		<footer class="footer">Copyright &copy; 2015</footer>
 		<!-- / footer -->
-		
-		<a class="menu" href="#">
-			<div class="line">
-				<span class="line01"></span>
-				<span class="line02"></span>
-				<span class="line03"></span>
-			</div>
-		</a>
-				
-		<ul class="nav">
-			<li><a href="/" title="Home">Home</a></li>
-			<li><a href="/how-to-get-started" title="How to get started">How to get started</a></li>
-			<li><a href="/faq" title="FAQ">FAQ</a></li>
-		</ul>
-		
+
+		<!-- menu -->
+		<% include partials/menu.html %>
+		<!-- / menu -->
+
 	</div>
 	<!-- / page -->
 	<script src="js/build/main.js"></script>
