@@ -14,9 +14,10 @@
 [data-sr] { visibility: hidden; }
 
 a {
-	text-decoration:none;
+	text-decoration:underline;
 	outline:none;
 	color:inherit;
+	font-family: $font-bold;
 }
 
 h1 {
