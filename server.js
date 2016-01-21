@@ -43,8 +43,8 @@ app.get('/faq', csrfProtection, function (req, res) {
     heapId: config.get('heap_id')
   });
 });
-app.get('/how-to-get-started', csrfProtection, function (req, res) {
-  res.render('how-to-get-started.html', {
+app.get('/how-it-works', csrfProtection, function (req, res) {
+  res.render('how-it-works.html', {
     csrfToken: req.csrfToken(),
     heapId: config.get('heap_id')
   });
