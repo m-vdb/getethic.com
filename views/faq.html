@@ -1,226 +1,180 @@
-<!doctype html>
-<!--[if lt IE 7 ]>	<html lang="fr" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>		<html lang="fr" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>		<html lang="fr" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>		<html lang="fr" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="fr" class="no-js"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
-	<title>Ethic</title>
-	
-	<!-- head meta -->
-	<% include partials/head-meta.html %>
-	<!-- / head meta -->
+{% extends 'base_page.html' %}
 
-	<link rel="stylesheet" href="css/normalize.css" /> 
-	<link rel="stylesheet" href="css/screen.css" /> 
-	<script src="js/build/modernizr.js"></script>
+{% block content %}
+<!-- mutual coverage -->
+<div class="hero">
+	<div class="hero-baseline">
+		<h1 data-sr="enter top, move 10px, over 1s"><strong>Frequently Asked Questions</strong></h1>
+	</div>
+</div>
+<!-- / mutual coverage -->
 
-	<!-- analytics -->
-	<% include partials/analytics.html %>
-	<!-- / analytics -->
+<!-- FAQ -->
+<section class="content">
+	<div class="wrapper">
+		<div class="row">
+			<div class="faq">
+				<div class="question">
+				  <span class="js-faq-item-link">Is ethic an insurance company?</span>
+				  <div class="answer">
+						No, Ethic is not. Ethic is a platform for mutualizing small claims. Large claims are still covered by your own insurer.
+				  </div>
+				</div>
 
-</head>
-<body class="home-page">
+				<div class="question">
+				  <span class="js-faq-item-link">Is Ethic transparent?</span>
+				  <div class="answer">
+						Yes, every payment made by or to our members is handled in a transparent way. To achieve this, Ethic leverages cutting-edge technology called <a href="https://en.wikipedia.org/wiki/Block_chain_(database)" target="_blank">block chain</a>.
+				  </div>
+				</div>
 
-	<!-- page -->
-	<div class="page">
-		
-		<div class="overlay"></div>
+				<div class="question">
+				  <span class="js-faq-item-link">What is an insurance deductible?</span>
+				  <div class="answer">
+						In auto insurance, the deductible is the amount the policyholder should pay himself before his insurer steps in. Typically, the higher the deductible, the lower the premium.
+				  </div>
+				</div>
 
-		<!-- heading -->
-		<% include partials/heading.html %>
-		<!-- / heading -->
+				<div class="question">
+				  <span class="js-faq-item-link">How does Ethic really lowers premiums without reducing coverage?</span>
+				  <div class="answer">
+						For auto coverage, the most common deductible in the United States is $500. If you chose a higher deductible, you would likely see a considerable drop in your premium, but you would now be exposed to paying this amount yourself. Ethic matches you to similar policyholders to cover anonymously this additional deductible. This is how you get lower premiums without carrying additional risk.
+				  </div>
+				</div>
 
-		<!-- mutual coverage -->
-		<div class="hero">
-			<div class="hero-baseline">
-				<h1 data-sr="enter top, move 10px, over 1s"><strong>Frequently Asked Questions</strong></h1>
-			</div>
-		</div>
-		<!-- / mutual coverage -->
-		
-		<!-- how it works -->
-		<section class="content">
-			<div class="wrapper">
-				<div class="row">
-					<div class="faq">
-						<div class="question">
-						  <span class="js-faq-item-link">Is ethic an insurance company?</span>
-						  <div class="answer">
-								No, Ethic is not. Ethic is a platform for mutualizing small claims. Large claims are still covered by your own insurer.
-						  </div>
-						</div>
+				<div class="question">
+				  <span class="js-faq-item-link">What do I have to pay on Ethic?</span>
+				  <div class="answer">
+						Every month, you will pay:
+						<ul>
+							<li>Your fair share of the total claimed within your pool in the past month.</li>
+							<li>An additional $2 service fee.</li>
+						</ul>
+				  </div>
+				</div>
 
-						<div class="question">
-						  <span class="js-faq-item-link">Is Ethic transparent?</span>
-						  <div class="answer">
-								Yes, every payment made by or to our members is handled in a transparent way. To achieve this, Ethic leverages cutting-edge technology called <a href="https://en.wikipedia.org/wiki/Block_chain_(database)" target="_blank">block chain</a>.
-						  </div>
-						</div>
+				<div class="question">
+				  <span class="js-faq-item-link">Can I lose money using Ethic?</span>
+				  <div class="answer">
+						No, Ethic is built in such a way that you cannot. There is a cap on the amount that you can be charged each month, and this cap ensures that you can’t lose money with Ethic.
+				  </div>
+				</div>
 
-						<div class="question">
-						  <span class="js-faq-item-link">What is an insurance deductible?</span>
-						  <div class="answer">
-								In auto insurance, the deductible is the amount the policyholder should pay himself before his insurer steps in. Typically, the higher the deductible, the lower the premium.
-						  </div>
-						</div>
+				<div class="question">
+				  <span class="js-faq-item-link">How do I join Ethic?</span>
+				  <div class="answer">
+						<ul>
+							<li>After you register on the website, we first pull information from the DMV. We do this to make sure dangerous drivers do not get access to the platform and penalize you and the rest of the community.</li>
+							<li>You then call your insurance company (or agent) and ask to raise both your collision and comprehensive deductibles. When doing so, you will have the opportunity to <a>estimate your savings</a>. This change will be effective the same day.</li>
+							<li>Once on the platform, behind the scenes, we attribute you to a large pool of members with a similar profile to yours. To preserve privacy, this pool is fully anonymous.</li>
+						</ul>
+				  </div>
+				</div>
 
-						<div class="question">
-						  <span class="js-faq-item-link">How does Ethic really lowers premiums without reducing coverage?</span>
-						  <div class="answer">
-								For auto coverage, the most common deductible in the United States is $500. If you chose a higher deductible, you would likely see a considerable drop in your premium, but you would now be exposed to paying this amount yourself. Ethic matches you to similar policyholders to cover anonymously this additional deductible. This is how you get lower premiums without carrying additional risk.
-						  </div>
-						</div>
+				<div class="question">
+				  <span class="js-faq-item-link">What does Ethic cover?</span>
+				  <div class="answer">
+						For auto insurance, Ethic covers any damage subject to a deductible:
+						<ul>
+							<li>Damage resulting from an at-fault collision</li>
+							<li>Damage resulting from what is typically referred to as "comprehensive"</li>
+						</ul>
+				  </div>
+				</div>
 
-						<div class="question">
-						  <span class="js-faq-item-link">What do I have to pay on Ethic?</span>
-						  <div class="answer">
-								Every month, you will pay:
-								<ul>
-									<li>Your fair share of the total claimed within your pool in the past month.</li>
-									<li>An additional $2 service fee.</li>
-								</ul>
-						  </div>
-						</div>
+				<div class="question">
+				  <span class="js-faq-item-link">What does Ethic not cover?</span>
+				  <div class="answer">
+						For auto insurance, Ethic does not cover:
+						<ul>
+							<li>Hospital expenses</li>
+							<li>Damage that was not your fault, which is covered in full by the other driver’s insurer</li>
+						</ul>
+				  </div>
+				</div>
 
-						<div class="question">
-						  <span class="js-faq-item-link">Can I lose money using Ethic?</span>
-						  <div class="answer">
-								No, Ethic is built in such a way that you cannot. There is a cap on the amount that you can be charged each month, and this cap ensures that you can’t lose money with Ethic.
-						  </div>
-						</div>
+				<div class="question">
+				  <span class="js-faq-item-link">In case of a claim, what is my out-of-pocket amount?</span>
+				  <div class="answer">
+						When you file a claim, you will be required to pay the first $500, including the $20 commission for handling the claim. This out-of-pocket is meant to avoid fraud and abusive claims, which would harm our members.
+				  </div>
+				</div>
 
-						<div class="question">
-						  <span class="js-faq-item-link">How do I join Ethic?</span>
-						  <div class="answer">
-								<ul>
-									<li>After you register on the website, we first pull information from the DMV. We do this to make sure dangerous drivers do not get access to the platform and penalize you and the rest of the community.</li>
-									<li>You then call your insurance company (or agent) and ask to raise both your collision and comprehensive deductibles. When doing so, you will have the opportunity to <a>estimate your savings</a>. This change will be effective the same day.</li>
-									<li>Once on the platform, behind the scenes, we attribute you to a large pool of members with a similar profile to yours. To preserve privacy, this pool is fully anonymous.</li>
-								</ul>
-						  </div>
-						</div>
+				<div class="question">
+				  <span class="js-faq-item-link">Is it in Ethic’s interest to deny claims or be conservative on payouts?</span>
+				  <div class="answer">
+						No. Claims are paid directly by Ethic members, not Ethic itself. This is a paradigm shift versus the traditional insurance industry. Ethic’s role is to make sure payouts are fair to everyone.
+				  </div>
+				</div>
 
-						<div class="question">
-						  <span class="js-faq-item-link">What does Ethic cover?</span>
-						  <div class="answer">
-								For auto insurance, Ethic covers any damage subject to a deductible:
-								<ul>
-									<li>Damage resulting from an at-fault collision</li>
-									<li>Damage resulting from what is typically referred to as "comprehensive"</li>
-								</ul>
-						  </div>
-						</div>
+				<div class="question">
+				  <span class="js-faq-item-link">Who is in charge of handling claims?</span>
+				  <div class="answer">
+						Ethic applies the “sharing economy” principle to claim auditing. Instead of speaking with your insurer’s employee, Ethic trains independent partners to autonomously lead you through the claim process, damage estimate and final payout. These independent partners have no incentive against you and are paid a flat amount for every claim they handle.
+				  </div>
+				</div>
 
-						<div class="question">
-						  <span class="js-faq-item-link">What does Ethic not cover?</span>
-						  <div class="answer">
-								For auto insurance, Ethic does not cover:
-								<ul>
-									<li>Hospital expenses</li>
-									<li>Damage that was not your fault, which is covered in full by the other driver’s insurer</li>
-								</ul>
-						  </div>
-						</div>
+				<div class="question">
+				  <span class="js-faq-item-link">OK, I got into an accident that I am responsible for. What do I do next?</span>
+				  <div class="answer">
+						You first file your claim in the Ethic app or website. You will be asked to provide a few photos and any additional document you may have. One of our partners will get in touch with you, listen to your story and guide you through the process. Depending on the level of damage, he will inform you whether you should file a claim with your own insurer to receive additional coverage.
+				  </div>
+				</div>
 
-						<div class="question">
-						  <span class="js-faq-item-link">In case of a claim, what is my out-of-pocket amount?</span>
-						  <div class="answer">
-								When you file a claim, you will be required to pay the first $500, including the $20 commission for handling the claim. This out-of-pocket is meant to avoid fraud and abusive claims, which would harm our members.
-						  </div>
-						</div>
+				<div class="question">
+				  <span class="js-faq-item-link">OK, I got into an accident that i am NOT responsible for. What do I do next?</span>
+				  <div class="answer">
+						The accident is not your fault, hence the other driver’s insurer must pay for the damage their policyholder inflicted to your vehicle. You must file a claim with the other driver’s insurer and quickly notify us using the Ethic app or website.
+				  </div>
+				</div>
 
-						<div class="question">
-						  <span class="js-faq-item-link">Is it in Ethic’s interest to deny claims or be conservative on payouts?</span>
-						  <div class="answer">
-								No. Claims are paid directly by Ethic members, not Ethic itself. This is a paradigm shift versus the traditional insurance industry. Ethic’s role is to make sure payouts are fair to everyone.
-						  </div>
-						</div>
+				<div class="question">
+				  <span class="js-faq-item-link">The other driver’s insurer refuses to pay for the damage. What should I do?</span>
+				  <div class="answer">
+						Unfortunately, some insurance companies do everything they can to avoid paying out claims to claimants. It happens. In this case, you must file a claim with your own insurer and pay your deductible. To make things easy for you, after making sure you tried to get paid by the other driver’s insurer, Ethic will pay this deductible for you, in full. In most cases, your insurer will go after the other driver’s insurer and is legally obliged to get you your deductible back, or at least part of it. When this occurs, you will be asked to pay the Ethic community back.
+				  </div>
+				</div>
 
-						<div class="question">
-						  <span class="js-faq-item-link">Who is in charge of handling claims?</span>
-						  <div class="answer">
-								Ethic applies the “sharing economy” principle to claim auditing. Instead of speaking with your insurer’s employee, Ethic trains independent partners to autonomously lead you through the claim process, damage estimate and final payout. These independent partners have no incentive against you and are paid a flat amount for every claim they handle.
-						  </div>
-						</div>
+				<div class="question">
+				  <span class="js-faq-item-link">Does Ethic work with my current insurer?</span>
+				  <div class="answer">
+						Ethic is designed to integrate with as many personal auto insurance policies as possible. Here is a <a>list</a> of insurance companies Ethic can be used with. If your current carrier does not appear in this list, <a>please let us know</a>.
+				  </div>
+				</div>
 
-						<div class="question">
-						  <span class="js-faq-item-link">OK, I got into an accident that I am responsible for. What do I do next?</span>
-						  <div class="answer">
-								You first file your claim in the Ethic app or website. You will be asked to provide a few photos and any additional document you may have. One of our partners will get in touch with you, listen to your story and guide you through the process. Depending on the level of damage, he will inform you whether you should file a claim with your own insurer to receive additional coverage.
-						  </div>
-						</div>
+				<div class="question">
+				  <span class="js-faq-item-link">How does Ethic promote honesty and trust?</span>
+				  <div class="answer">
+						Ethic is a platform on which members cover each other directly. Being fair to other members means keeping claims low and reasonable. Don’t forget, Ethic is a community of people who rely on each other’s honesty.
+				  </div>
+				</div>
 
-						<div class="question">
-						  <span class="js-faq-item-link">OK, I got into an accident that i am NOT responsible for. What do I do next?</span>
-						  <div class="answer">
-								The accident is not your fault, hence the other driver’s insurer must pay for the damage their policyholder inflicted to your vehicle. You must file a claim with the other driver’s insurer and quickly notify us using the Ethic app or website.
-						  </div>
-						</div>
+				<div class="question">
+				  <span class="js-faq-item-link">How is Ethic mutual?</span>
+				  <div class="answer">
+						Once your claim is validated, members inside your pool will directly cover it in equal proportions, up to your deductible amount. In exchange, you reciprocally agree to cover your share of claims filed by other members inside your pool. This direct coverage system allows you to mutualize part of your risk with other individuals. By doing so, you and the other members rely less on the insurer for coverage.
+				  </div>
+				</div>
 
-						<div class="question">
-						  <span class="js-faq-item-link">The other driver’s insurer refuses to pay for the damage. What should I do?</span>
-						  <div class="answer">
-								Unfortunately, some insurance companies do everything they can to avoid paying out claims to claimants. It happens. In this case, you must file a claim with your own insurer and pay your deductible. To make things easy for you, after making sure you tried to get paid by the other driver’s insurer, Ethic will pay this deductible for you, in full. In most cases, your insurer will go after the other driver’s insurer and is legally obliged to get you your deductible back, or at least part of it. When this occurs, you will be asked to pay the Ethic community back.
-						  </div>
-						</div>
+				<div class="question" id="build-my-own-pool">
+				  <span class="js-faq-item-link">I want to build my own pool, how does it work?</span>
+				  <div class="answer">
+						By means of making things as seamless as possible, Ethic attributes you by default to a pool of members with similar profiles. However, if you want to build your own pool with people you trust and have affinities with (schoolmates, people who belong to your sports club, residents of your neighborhood...) we strongly encourage you to do it. The minimum requirement will be for the group to entail at least 10 people. To get started, call us at 415-799-6439 and we will tell you how to get started in no time!
+				  </div>
+				</div>
 
-						<div class="question">
-						  <span class="js-faq-item-link">Does Ethic work with my current insurer?</span>
-						  <div class="answer">
-								Ethic is designed to integrate with as many personal auto insurance policies as possible. Here is a <a>list</a> of insurance companies Ethic can be used with. If your current carrier does not appear in this list, <a>please let us know</a>.
-						  </div>
-						</div>
-
-						<div class="question">
-						  <span class="js-faq-item-link">How does Ethic promote honesty and trust?</span>
-						  <div class="answer">
-								Ethic is a platform on which members cover each other directly. Being fair to other members means keeping claims low and reasonable. Don’t forget, Ethic is a community of people who rely on each other’s honesty.
-						  </div>
-						</div>
-
-						<div class="question">
-						  <span class="js-faq-item-link">How is Ethic mutual?</span>
-						  <div class="answer">
-								Once your claim is validated, members inside your pool will directly cover it in equal proportions, up to your deductible amount. In exchange, you reciprocally agree to cover your share of claims filed by other members inside your pool. This direct coverage system allows you to mutualize part of your risk with other individuals. By doing so, you and the other members rely less on the insurer for coverage.
-						  </div>
-						</div>
-
-						<div class="question" id="build-my-own-pool">
-						  <span class="js-faq-item-link">I want to build my own pool, how does it work?</span>
-						  <div class="answer">
-								By means of making things as seamless as possible, Ethic attributes you by default to a pool of members with similar profiles. However, if you want to build your own pool with people you trust and have affinities with (schoolmates, people who belong to your sports club, residents of your neighborhood...) we strongly encourage you to do it. The minimum requirement will be for the group to entail at least 10 people. To get started, call us at 415-799-6439 and we will tell you how to get started in no time!
-						  </div>
-						</div>
-
-						<div class="question">
-						  <span class="js-faq-item-link">Is my privacy protected when filing a claim on Ethic?</span>
-						  <div class="answer">
-								Yes, totally. We want to protect your privacy and will never inform other members that you specifically filed a claim. Your personal information stays with us. Ethic is about allowing transparency while protecting your privacy.
-						  </div>
-						</div>
-					</div>
+				<div class="question">
+				  <span class="js-faq-item-link">Is my privacy protected when filing a claim on Ethic?</span>
+				  <div class="answer">
+						Yes, totally. We want to protect your privacy and will never inform other members that you specifically filed a claim. Your personal information stays with us. Ethic is about allowing transparency while protecting your privacy.
+				  </div>
 				</div>
 			</div>
-		</section>
-		<!-- / how it works -->
-		
-		<!-- availability -->
-		<% include partials/availability.html %>
-		<!-- / availability -->
-
-		<!-- footer -->
-		<footer class="footer">Copyright &copy; 2015</footer>
-		<!-- / footer -->
-
-		<!-- menu -->
-		<% include partials/menu.html %>
-		<!-- / menu -->
-
+		</div>
 	</div>
-	<!-- / page -->
-	<script src="js/build/faq.js"></script>
-
-</body>
-</html>
+</section>
+<!-- / FAQ -->
+		
+{% block scripts %}
+<script src="js/build/faq.js"></script>
+{% endblock %}

@@ -1,0 +1,60 @@
+<!doctype html>
+<!--[if lt IE 7 ]>  <html lang="fr" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>   <html lang="fr" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>   <html lang="fr" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>   <html lang="fr" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="fr" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <title>Ethic</title>
+  
+  <!-- head meta -->
+  {% include "partials/head-meta.html" %}
+  <!-- / head meta -->
+
+  <link rel="stylesheet" href="css/normalize.css" /> 
+  <link rel="stylesheet" href="css/screen.css" /> 
+  <script src="js/build/modernizr.js"></script>
+
+  <!-- analytics -->
+  {% include "partials/analytics.html" %}
+  <!-- / analytics -->
+
+  {% block extrahead %}{% endblock %}
+
+</head>
+<body class="home-page">
+
+  <!-- page -->
+  <div class="page {% block extracontainerclass %}{% endblock %}">
+    
+    <div class="overlay"></div>
+
+    <!-- heading -->
+    {% include "partials/heading.html" %}
+    <!-- / heading -->
+
+    {% block content %}{% endblock %}
+
+    {% block availability %}{% endblock %}
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="copyright">
+        Copyright &copy; 2015
+      </div>
+      <div class="love">
+        Made with ♥ in California
+      </div>
+    </footer>
+    <!-- / footer -->
+
+    <!-- menu -->
+    {% include "partials/menu.html" %}
+    <!-- / menu -->
+
+  </div>
+  <!-- / page -->
+  {% block scripts %}{% endblock %}
+</body>
+</html>
