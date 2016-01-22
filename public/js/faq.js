@@ -8,6 +8,8 @@ var UI = require('./Ethic/UI.js');
 var nav = require('./Ethic/nav.js');
 var faq = require('./Ethic/faq.js');
 
-UI.init();
-nav.init();
-faq.init();
+$("document").ready(function() {
+  UI.init();
+  nav.init();
+  faq.init();
+});
