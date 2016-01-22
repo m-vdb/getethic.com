@@ -9,7 +9,7 @@
 	<title>Ethic</title>
 	
 	<!-- head meta -->
-	<% include partials/head-meta.html %>
+	{% include "partials/head-meta.html" %}
 	<!-- / head meta -->
 
 	<link rel="stylesheet" href="css/normalize.css" /> 
@@ -17,11 +17,11 @@
 	<script src="js/build/modernizr.js"></script>
 
 	<!-- analytics -->
-	<% include partials/analytics.html %>
+	{% include "partials/analytics.html" %}
 	<!-- / analytics -->
 
 	<!-- live-chat -->
-	<% include partials/live-chat.html %>
+	{% include "partials/live-chat.html" %}
 	<!-- / live-chat -->
 
 </head>
@@ -33,7 +33,7 @@
 		<div class="overlay"></div>
 
 		<!-- heading -->
-		<% include partials/heading.html %>
+		{% include "partials/heading.html" %}
 		<!-- / heading -->
 
 		<!-- mutual coverage -->
@@ -44,7 +44,7 @@
 			    <div class="row">
 			    	<p data-sr="enter top, move 10px, over 1s, wait 0.2s">We’re launching very soon. We’d love to give you early access!</p>
 						<form class="form" action="/register-beta" method="post" data-parsley-validate>
-			        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+			        <input type="hidden" name="_csrf" value="{{ csrfToken }}">
 			        <fieldset>
 			          <input type="email" name="email" id="subscriber" required data-required="true" data-trigger="change" data-parsley-type="email" class="js-register-email"/>
 			          <label id="subscriber">Your email</label>
@@ -206,7 +206,7 @@
 		<!-- / see for yourself -->
 		
 		<!-- availability -->
-		<% include partials/availability.html %>
+		{% include "partials/availability.html" %}
 		<!-- / availability -->
 
 		<!-- footer -->
@@ -214,7 +214,7 @@
 		<!-- / footer -->
 
 		<!-- menu -->
-		<% include partials/menu.html %>
+		{% include "partials/menu.html" %}
 		<!-- / menu -->
 
 	</div>
