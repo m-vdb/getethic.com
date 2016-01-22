@@ -18,6 +18,10 @@ a {
 	outline:none;
 	color:inherit;
 	font-family: $font-bold;
+
+	small {
+		font-family: $font-light;
+	}
 }
 
 h1 {
