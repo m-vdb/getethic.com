@@ -9,7 +9,9 @@ var nav = require('./Ethic/nav.js');
 var slider = require('./Ethic/slider.js');
 var click = require('./Ethic/click.js');
 
-UI.init();
-nav.init();
-slider.init();
-click.init();
+$("document").ready(function() {
+  UI.init();
+  nav.init();
+  slider.init();
+  click.init();
+});
