@@ -1,67 +1,26 @@
-<!doctype html>
-<!--[if lt IE 7 ]>  <html lang="fr" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>   <html lang="fr" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>   <html lang="fr" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>   <html lang="fr" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="fr" class="no-js"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8" />
-  <title>Ethic</title>
-  
-  <!-- head meta -->
-  {% include "partials/head-meta.html" %}
-  <!-- / head meta -->
+{% extends 'base_page.html' %}
 
-  <link rel="stylesheet" href="css/normalize.css" /> 
-  <link rel="stylesheet" href="css/screen.css" /> 
-  <script src="js/build/modernizr.js"></script>
-
-  <!-- analytics -->
-  {% include "partials/analytics.html" %}
-  <!-- / analytics -->
-
-</head>
-<body class="home-page">
-
-  <!-- page -->
-  <div class="page">
-    
-    <div class="overlay"></div>
-
-    <!-- heading -->
-    {% include "partials/heading.html" %}
-    <!-- / heading -->
-
-    <!-- mutual coverage -->
-    <div class="hero">
-      <div class="hero-baseline">
-        <h1 data-sr="enter top, move 10px, over 1s"><strong>Thank you :-)</strong></h1>
-      </div>
-    </div>
-    <!-- / mutual coverage -->
-    
-    <!-- thanks -->
-    <section class="content">
-      <div class="wrapper">
-        <div class="row">
-          <p>We're polishing the last details of our platform.</p>
-          <p>We'll launch it very soon and can't wait to have you on board!</p>
-        </div>
-      </div>
-    </section>
-    <!-- / thanks -->
-
-    <!-- footer -->
-    <footer class="footer">Copyright &copy; 2015</footer>
-    <!-- / footer -->
-
-    <!-- menu -->
-    {% include "partials/menu.html" %}
-    <!-- / menu -->
-
+{% block content %}
+<!-- hero -->
+<div class="hero">
+  <div class="hero-baseline">
+    <h1 data-sr="enter top, move 10px, over 1s"><strong>Thank you :-)</strong></h1>
   </div>
-  <!-- / page -->
-  <script src="js/build/main.js"></script>
+</div>
+<!-- / hero -->
 
-</body>
-</html>
+<!-- thanks -->
+<section class="content">
+  <div class="wrapper">
+    <div class="row">
+      <p>We're polishing the last details of our platform.</p>
+      <p>We'll launch it very soon and can't wait to have you on board!</p>
+    </div>
+  </div>
+</section>
+<!-- / thanks -->
+{% endblock %}
+
+{% block scripts %}
+<script src="js/build/main.js"></script>
+{% endblock %}

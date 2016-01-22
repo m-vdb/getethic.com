@@ -1,224 +1,184 @@
-<!doctype html>
-<!--[if lt IE 7 ]>	<html lang="fr" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>		<html lang="fr" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>		<html lang="fr" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>		<html lang="fr" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="fr" class="no-js"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
-	<title>Ethic</title>
-	
-	<!-- head meta -->
-	{% include "partials/head-meta.html" %}
-	<!-- / head meta -->
+{% extends 'base_page.html' %}
 
-	<link rel="stylesheet" href="css/normalize.css" /> 
-	<link rel="stylesheet" href="css/screen.css" /> 
-	<script src="js/build/modernizr.js"></script>
-
-	<!-- analytics -->
-	{% include "partials/analytics.html" %}
-	<!-- / analytics -->
-
+{% block extrahead %}
 	<!-- live-chat -->
 	{% include "partials/live-chat.html" %}
 	<!-- / live-chat -->
+{% endblock %}
 
-</head>
-<body class="home-page">
+{% block extracontainerclass %}home{% endblock %}
 
-	<!-- page -->
-	<div class="page home">
-		
-		<div class="overlay"></div>
-
-		<!-- heading -->
-		{% include "partials/heading.html" %}
-		<!-- / heading -->
-
-		<!-- mutual coverage -->
-		<div class="hero">
-			<div class="hero-baseline">
-				<h1 data-sr="enter top, move 10px, over 1s"><strong>Mutual auto insurance, the new way.</strong></h1>
-				<div class="wrapper">
-			    <div class="row">
-			    	<p data-sr="enter top, move 10px, over 1s, wait 0.2s">We’re launching very soon. We’d love to give you early access!</p>
-						<form class="form" action="/register-beta" method="post" data-parsley-validate>
-			        <input type="hidden" name="_csrf" value="{{ csrfToken }}">
-			        <fieldset>
-			          <input type="email" name="email" id="subscriber" required data-required="true" data-trigger="change" data-parsley-type="email" class="js-register-email"/>
-			          <label id="subscriber">Your email</label>
-			          <button type="submit"><i class="send js-register-submit"></i></button>
-			        </fieldset>
-			      </form>
-					</div>
-				</div>
+{% block content %}
+<!-- mutual coverage -->
+<div class="hero">
+	<div class="hero-baseline">
+		<h1 data-sr="enter top, move 10px, over 1s"><strong>Mutual auto insurance, the new way.</strong></h1>
+		<div class="wrapper">
+	    <div class="row">
+	    	<p data-sr="enter top, move 10px, over 1s, wait 0.2s">We’re launching very soon. We’d love to give you early access!</p>
+				<form class="form" action="/register-beta" method="post" data-parsley-validate>
+	        <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+	        <fieldset>
+	          <input type="email" name="email" id="subscriber" required data-required="true" data-trigger="change" data-parsley-type="email" class="js-register-email"/>
+	          <label id="subscriber">Your email</label>
+	          <button type="submit"><i class="send js-register-submit"></i></button>
+	        </fieldset>
+	      </form>
 			</div>
-			<div class="hero-banner">San Francisco</div>
 		</div>
-		<!-- / mutual coverage -->
-		
-		<!-- how it works -->
-		<section class="content">
-			<div class="wrapper">
-				<div class="row">
-					<h2><strong>The concept behind Ethic</strong></h1>
-					<p data-sr="enter top, move 50px, over 1s">Ethic is a platform for consumers with similar profiles to directly cover each other’s small claims, and thus rely less on insurance companies for coverage. This results in both smaller monthly premiums and less claims filed with your insurer!</p>
-				</div>
-			</div>
-		</section>
-		<!-- / how it works -->
-		
-		<!-- claims -->
-		<section class="content">
-			<div class="claims">
-				<div class="small"><img src="img/svg/small-claims_V2.svg" alt="Small Claims" /></div>
-				<div class="large"><img src="img/svg/large-claims.svg" alt="Large Claims" /></div>
-				<div class="slider">
-					<div class="handle"></div>
-					<span class="slider-small">Small Claims</span>
-					<span class="slider-large">Large Claims</span>
-				</div>
-			</div>
-		</section>
-		<!-- / claims -->
-
-		<!-- a new approach -->
-		<section class="content blue">
-			<div class="wrapper">
-				<div class="row">
-					<h2><strong>A new approach to mutual coverage</strong></h2>
-					<div class="col-2" data-sr="enter left, move 20px, over 1s">
-						<p>Ethic is a California-based company which started with the assessment that <strong>auto insurance is too expensive and opaque</strong>. Traditional insurers charge very high premiums, but policyholders don’t benefit as much as they should.</p>
-
-						<p>In 2014, for every dollar paid in premiums to the largest insurer in the US, only 63 cents actually went to covering damages to policyholders! Ethic brings a <strong>peer-to-peer architecture</strong> to the existing insurance landscape: consumers with similar profiles <strong>directly cover each other’s small claims</strong>, and thus rely on their insurer only for large amounts.</p>
-
-						<p>Think of it as a new kind of mutualization. This results in both <strong>smaller monthly premiums and less claims filed with your insurer!</strong></p>
-					</div>
-					<div class="col-2" data-sr="enter right, move 20px, over 1s">
-					<p>When you join Ethic, we automatically match you to a pool of safe drivers with similar profiles to yours. If you wish to create your own pool with people you trust and have affinities with (people you went to school with, people who belong to your sports club, residents of your neighborhood...) we will help you <a href="/faq#build-my-own-pool">get set up</a> in no time.</p>
-
-					<p>If you get into say a collision and need coverage, <strong>members inside your pool will directly cover it in equal proportions</strong>, up to a certain amount.</p>
-
-					<p>If the amount of your claim is substantial, your own insurer will step in to cover the rest. You <strong>reciprocally agree to cover your share of claims</strong> filed by other drivers inside your pool. The less the group claims, the more members save. Ethic makes <strong>coverage more humane and less expensive</strong>, without having to spend hours shopping around to change carriers!</p>
-				</div>
-			</div>
-		</section>
-		<!-- / a new approach -->
-		
-		<!-- what make Ethic so great -->
-		<section class="content">
-			<div class="wrapper">
-				<div class="row">
-					<h2><strong>What's in it for you?</strong></h1>
-					<div class="col-3" data-sr="enter top, move 50px, over 1s">
-						<img src="img/svg/lower.svg" alt="Lower premiums" />
-						<h3><strong>Lower premiums</strong></h3>
-						<p>By joining Ethic, you pay considerably less in premiums each month to your insurer. The only thing you pay on Ethic is a contribution to others' claims. Nothing else.</p>
-					</div>
-					<div class="col-3" data-sr="enter top, move 50px, over 1s, wait 0.2s">
-						<img src="img/svg/coverage.svg" alt="Unchanged coverage" />
-						<h3><strong>Unchanged coverage</strong></h3>
-						<p>In the unwanted case you would have a claim, Ethic members will cover it up to a certain amount. If it is a large claim, your insurer will kick in and cover the rest.</p>
-					</div>
-					<div class="col-3" data-sr="enter top, move 50px, over 1s, wait 0.4s">
-						<img src="img/svg/better.svg" alt="Better claim experience" />
-						<h3><strong>Better claim experience</strong></h3>
-						<p>Small claims require flexibility. You shouldn't have to go through a cumbersome process. Claims are reviewed by our qualified, independant and unbiased partners.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- / what make Ethic so great -->
-		
-		<!-- our technology -->
-		<section class="content blue">
-			<div class="wrapper">
-				<div class="row">
-					<h2><strong>Our technology serves transparency</strong></h1>
-					<p data-sr="enter top, move 50px, over 1s">Ethic is built in such a way that the service is fully transparent and fair. We use <i>block chain</i> technology to keep track of claims and monthly payments. In our view, part of the problem today with insurance companies is the lack of transparency: you have no idea where your money actually goes. With Ethic and its technology, what is paid by members goes directly to covering claims. And our use of the block chain is the unquestionable proof of that.</p>
-				</div>
-			</div>
-		</section>
-		<!-- / our technology -->
-		
-		<!-- see for yourself -->
-		<section class="content">
-			<div class="wrapper">
-				<div class="row">
-					<h2><strong>We're compatible with your insurer</strong></h1>
-					<div class="profil">
-						<div class="profil-picture">
-							<img src="img/profil/profil-1.jpg" alt="profil-1" />
-						</div>
-						<ul>
-							<li data-sr="enter left, move 20px, over 1s">29 years old</li>
-							<li data-sr="enter left, move 20px, over 1s, wait 0.2s">Toyota Prius</li>
-							<li data-sr="enter left, move 20px, over 1s, wait 0.3s">2014</li>
-							<li data-sr="enter left, move 20px, over 1s, wait 0.4s">San Francisco</li>
-							<li data-sr="enter left, move 20px, over 1s, wait 0.5s"><strong>Insured with Progressive</strong></li>
-							<li data-sr="enter left, move 20px, over 1s, wait 0.6s"><strong>SAVES $277 annually</strong></li>
-						</ul>
-					</div>
-					<div class="profil">
-						<div class="profil-picture">
-							<img src="img/profil/profil-2.jpg" alt="profil-2" />
-						</div>
-						<ul>
-							<li data-sr="enter right, move 20px, over 1s">29 years old</li>
-							<li data-sr="enter right, move 20px, over 1s, wait 0.2s">Honda Civic</li>
-							<li data-sr="enter right, move 20px, over 1s, wait 0.3s">2014</li>
-							<li data-sr="enter right, move 20px, over 1s, wait 0.4s">San Francisco</li>
-							<li data-sr="enter right, move 20px, over 1s, wait 0.5s"><strong>Insured with StateFarm</strong></li>
-							<li data-sr="enter right, move 20px, over 1s, wait 0.6s"><strong>SAVES $343 annually</strong></li>
-						</ul>
-					</div>
-					<div class="profil">
-						<div class="profil-picture">
-							<img src="img/profil/profil-3.jpg" alt="profil-3" />
-						</div>
-						<ul>
-							<li data-sr="enter left, move 20px, over 1s">30 years old</li>
-							<li data-sr="enter left, move 20px, over 1s, wait 0.2s">Ford C‐Max</li>
-							<li data-sr="enter left, move 20px, over 1s, wait 0.3s">2013</li>
-							<li data-sr="enter left, move 20px, over 1s, wait 0.4s">San Francisco</li>
-							<li data-sr="enter left, move 20px, over 1s, wait 0.5s"><strong>Insured with Esurance</strong></li>
-							<li data-sr="enter left, move 20px, over 1s, wait 0.6s"><strong>SAVES $459 annually</strong></li>
-						</ul>
-					</div>
-					<div class="profil">
-						<div class="profil-picture">
-							<img src="img/profil/profil-4.jpg" alt="profil-4" />
-						</div>
-						<ul>
-							<li data-sr="enter right, move 20px, over 1s">42 years old</li>
-							<li data-sr="enter right, move 20px, over 1s, wait 0.2s">Honda Civic</li>
-							<li data-sr="enter right, move 20px, over 1s, wait 0.3s">2014</li>
-							<li data-sr="enter right, move 20px, over 1s, wait 0.4s">Los Angeles</li>
-							<li data-sr="enter right, move 20px, over 1s, wait 0.5s"><strong>Insured with Geico</strong></li>
-							<li data-sr="enter right, move 20px, over 1s, wait 0.6s"><strong>SAVES $193 annually</strong></li>
-						</ul>
-					</div>
-					<small>These are solely estimates based on actual quotes. Savings through Ethic may vary based on multiple factors.</small>
-				</div>
-			</div>
-		</section>
-		<!-- / see for yourself -->
-		
-		<!-- availability -->
-		{% include "partials/availability.html" %}
-		<!-- / availability -->
-
-		<!-- footer -->
-		<footer class="footer">Copyright &copy; 2015</footer>
-		<!-- / footer -->
-
-		<!-- menu -->
-		{% include "partials/menu.html" %}
-		<!-- / menu -->
-
 	</div>
-	<!-- / page -->
-	<script src="js/build/main.js"></script>
-</body>
-</html>
+	<div class="hero-banner">San Francisco</div>
+</div>
+<!-- / mutual coverage -->
+
+<!-- how it works -->
+<section class="content">
+	<div class="wrapper">
+		<div class="row">
+			<h2><strong>The concept behind Ethic</strong></h1>
+			<p data-sr="enter top, move 50px, over 1s">Ethic is a platform for consumers with similar profiles to directly cover each other’s small claims, and thus rely less on insurance companies for coverage. This results in both smaller monthly premiums and less claims filed with your insurer!</p>
+		</div>
+	</div>
+</section>
+<!-- / how it works -->
+
+<!-- claims -->
+<section class="content">
+	<div class="claims">
+		<div class="small"><img src="img/svg/small-claims_V2.svg" alt="Small Claims" /></div>
+		<div class="large"><img src="img/svg/large-claims.svg" alt="Large Claims" /></div>
+		<div class="slider">
+			<div class="handle"></div>
+			<span class="slider-small">Small Claims</span>
+			<span class="slider-large">Large Claims</span>
+		</div>
+	</div>
+</section>
+<!-- / claims -->
+
+<!-- a new approach -->
+<section class="content blue">
+	<div class="wrapper">
+		<div class="row">
+			<h2><strong>A new approach to mutual coverage</strong></h2>
+			<div class="col-2" data-sr="enter left, move 20px, over 1s">
+				<p>Ethic is a California-based company which started with the assessment that <strong>auto insurance is too expensive and opaque</strong>. Traditional insurers charge very high premiums, but policyholders don’t benefit as much as they should.</p>
+
+				<p>In 2014, for every dollar paid in premiums to the largest insurer in the US, only 63 cents actually went to covering damages to policyholders! Ethic brings a <strong>peer-to-peer architecture</strong> to the existing insurance landscape: consumers with similar profiles <strong>directly cover each other’s small claims</strong>, and thus rely on their insurer only for large amounts.</p>
+
+				<p>Think of it as a new kind of mutualization. This results in both <strong>smaller monthly premiums and less claims filed with your insurer!</strong></p>
+			</div>
+			<div class="col-2" data-sr="enter right, move 20px, over 1s">
+			<p>When you join Ethic, we automatically match you to a pool of safe drivers with similar profiles to yours. If you wish to create your own pool with people you trust and have affinities with (people you went to school with, people who belong to your sports club, residents of your neighborhood...) we will help you <a href="/faq#build-my-own-pool">get set up</a> in no time.</p>
+
+			<p>If you get into say a collision and need coverage, <strong>members inside your pool will directly cover it in equal proportions</strong>, up to a certain amount.</p>
+
+			<p>If the amount of your claim is substantial, your own insurer will step in to cover the rest. You <strong>reciprocally agree to cover your share of claims</strong> filed by other drivers inside your pool. The less the group claims, the more members save. Ethic makes <strong>coverage more humane and less expensive</strong>, without having to spend hours shopping around to change carriers!</p>
+		</div>
+	</div>
+</section>
+<!-- / a new approach -->
+
+<!-- what make Ethic so great -->
+<section class="content">
+	<div class="wrapper">
+		<div class="row">
+			<h2><strong>What's in it for you?</strong></h1>
+			<div class="col-3" data-sr="enter top, move 50px, over 1s">
+				<img src="img/svg/lower.svg" alt="Lower premiums" />
+				<h3><strong>Lower premiums</strong></h3>
+				<p>By joining Ethic, you pay considerably less in premiums each month to your insurer. The only thing you pay on Ethic is a contribution to others' claims. Nothing else.</p>
+			</div>
+			<div class="col-3" data-sr="enter top, move 50px, over 1s, wait 0.2s">
+				<img src="img/svg/coverage.svg" alt="Unchanged coverage" />
+				<h3><strong>Unchanged coverage</strong></h3>
+				<p>In the unwanted case you would have a claim, Ethic members will cover it up to a certain amount. If it is a large claim, your insurer will kick in and cover the rest.</p>
+			</div>
+			<div class="col-3" data-sr="enter top, move 50px, over 1s, wait 0.4s">
+				<img src="img/svg/better.svg" alt="Better claim experience" />
+				<h3><strong>Better claim experience</strong></h3>
+				<p>Small claims require flexibility. You shouldn't have to go through a cumbersome process. Claims are reviewed by our qualified, independant and unbiased partners.</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- / what make Ethic so great -->
+
+<!-- our technology -->
+<section class="content blue">
+	<div class="wrapper">
+		<div class="row">
+			<h2><strong>Our technology serves transparency</strong></h1>
+			<p data-sr="enter top, move 50px, over 1s">Ethic is built in such a way that the service is fully transparent and fair. We use <i>block chain</i> technology to keep track of claims and monthly payments. In our view, part of the problem today with insurance companies is the lack of transparency: you have no idea where your money actually goes. With Ethic and its technology, what is paid by members goes directly to covering claims. And our use of the block chain is the unquestionable proof of that.</p>
+		</div>
+	</div>
+</section>
+<!-- / our technology -->
+
+<!-- see for yourself -->
+<section class="content">
+	<div class="wrapper">
+		<div class="row">
+			<h2><strong>We're compatible with your insurer</strong></h1>
+			<div class="profil">
+				<div class="profil-picture">
+					<img src="img/profil/profil-1.jpg" alt="profil-1" />
+				</div>
+				<ul>
+					<li data-sr="enter left, move 20px, over 1s">29 years old</li>
+					<li data-sr="enter left, move 20px, over 1s, wait 0.2s">Toyota Prius</li>
+					<li data-sr="enter left, move 20px, over 1s, wait 0.3s">2014</li>
+					<li data-sr="enter left, move 20px, over 1s, wait 0.4s">San Francisco</li>
+					<li data-sr="enter left, move 20px, over 1s, wait 0.5s"><strong>Insured with Progressive</strong></li>
+					<li data-sr="enter left, move 20px, over 1s, wait 0.6s"><strong>SAVES $277 annually</strong></li>
+				</ul>
+			</div>
+			<div class="profil">
+				<div class="profil-picture">
+					<img src="img/profil/profil-2.jpg" alt="profil-2" />
+				</div>
+				<ul>
+					<li data-sr="enter right, move 20px, over 1s">29 years old</li>
+					<li data-sr="enter right, move 20px, over 1s, wait 0.2s">Honda Civic</li>
+					<li data-sr="enter right, move 20px, over 1s, wait 0.3s">2014</li>
+					<li data-sr="enter right, move 20px, over 1s, wait 0.4s">San Francisco</li>
+					<li data-sr="enter right, move 20px, over 1s, wait 0.5s"><strong>Insured with StateFarm</strong></li>
+					<li data-sr="enter right, move 20px, over 1s, wait 0.6s"><strong>SAVES $343 annually</strong></li>
+				</ul>
+			</div>
+			<div class="profil">
+				<div class="profil-picture">
+					<img src="img/profil/profil-3.jpg" alt="profil-3" />
+				</div>
+				<ul>
+					<li data-sr="enter left, move 20px, over 1s">30 years old</li>
+					<li data-sr="enter left, move 20px, over 1s, wait 0.2s">Ford C‐Max</li>
+					<li data-sr="enter left, move 20px, over 1s, wait 0.3s">2013</li>
+					<li data-sr="enter left, move 20px, over 1s, wait 0.4s">San Francisco</li>
+					<li data-sr="enter left, move 20px, over 1s, wait 0.5s"><strong>Insured with Esurance</strong></li>
+					<li data-sr="enter left, move 20px, over 1s, wait 0.6s"><strong>SAVES $459 annually</strong></li>
+				</ul>
+			</div>
+			<div class="profil">
+				<div class="profil-picture">
+					<img src="img/profil/profil-4.jpg" alt="profil-4" />
+				</div>
+				<ul>
+					<li data-sr="enter right, move 20px, over 1s">42 years old</li>
+					<li data-sr="enter right, move 20px, over 1s, wait 0.2s">Honda Civic</li>
+					<li data-sr="enter right, move 20px, over 1s, wait 0.3s">2014</li>
+					<li data-sr="enter right, move 20px, over 1s, wait 0.4s">Los Angeles</li>
+					<li data-sr="enter right, move 20px, over 1s, wait 0.5s"><strong>Insured with Geico</strong></li>
+					<li data-sr="enter right, move 20px, over 1s, wait 0.6s"><strong>SAVES $193 annually</strong></li>
+				</ul>
+			</div>
+			<small>These are solely estimates based on actual quotes. Savings through Ethic may vary based on multiple factors.</small>
+		</div>
+	</div>
+</section>
+<!-- / see for yourself -->
+{% endblock %}
+
+{% block scripts %}
+<script src="js/build/main.js"></script>
+{% endblock %}
