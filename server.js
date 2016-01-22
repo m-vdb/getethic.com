@@ -14,9 +14,9 @@ var app = express();
 var csrfProtection = csrf({cookie: true});
 
 // configuration
-app.set('views', './views');
-app.set('view engine', 'ejs');
-app.engine('html', require('ejs').renderFile);
+app.set('views', __dirname + '/views');
+app.set('view engine', 'html');
+app.engine('html', require('swig').renderFile);
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 
@@ -31,7 +31,7 @@ app.use(function (req, res, next) {
 
 // routes
 app.get('/', csrfProtection, function (req, res) {
-  res.render('index.html', {
+  res.render('index', {
     csrfToken: req.csrfToken(),
     zopimId: config.get('zopim_id'),
     heapId: config.get('heap_id')
