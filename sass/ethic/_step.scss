@@ -105,4 +105,38 @@
 			}
 		}
 	}
+
+	.step-interested {
+		display: block;
+		background-color: $blue;
+		padding: 6%;
+		width: 100%;
+		z-index: 1;
+		position: relative;
+		border: 0;
+		color: $white;
+		text-transform: uppercase;
+		text-decoration: none;
+		margin: auto;
+
+		@include transition(background-color .2s);
+
+		@include for-tablet-and-up {
+			display: inline-block;
+			border-left: 1px solid $blue !important;
+			padding: 24px 30px;
+			width: auto;
+
+			&:hover {
+				border-left: 1px solid $white !important;
+			}
+		}
+
+		@include for-desktop-and-up {
+			&:hover {
+				color: $blue;
+				background-color: $white;
+			}
+		}
+	}
 }
