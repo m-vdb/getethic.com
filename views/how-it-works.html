@@ -1,98 +1,53 @@
-<!doctype html>
-<!--[if lt IE 7 ]>	<html lang="fr" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>		<html lang="fr" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>		<html lang="fr" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>		<html lang="fr" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="fr" class="no-js"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
-	<title>Ethic</title>
-	
-	<!-- head meta -->
-	{% include "partials/head-meta.html" %}
-	<!-- / head meta -->
+{% extends 'base_page.html' %}
 
-	<link rel="stylesheet" href="css/normalize.css" /> 
-	<link rel="stylesheet" href="css/screen.css" /> 
-	<script src="js/build/modernizr.js"></script>
-
-	<!-- analytics -->
-	{% include "partials/analytics.html" %}
-	<!-- / analytics -->
-
-</head>
-<body class="home-page">
-
-	<!-- page -->
-	<div class="page">
-		
-		<div class="overlay"></div>
-
-		<!-- heading -->
-		{% include "partials/heading.html" %}
-		<!-- / heading -->
-
-		<!-- mutual coverage -->
-		<div class="hero">
-			<div class="hero-baseline">
-				<h1 data-sr="enter top, move 10px, over 1s"><strong>How it works</strong></h1>
-			</div>
-		</div>
-		<!-- / mutual coverage -->
-		
-		<!-- how it works -->
-		<section class="content">
-			<div class="wrapper">
-				<div class="row">
-					<h2><strong>3 simple steps</strong></h2>
-						<div class="step">
-							<div class="step-number" data-sr="enter bottom, move 5px, over 1s">1</div>
-							<p data-sr="enter top, move 50px, over 1s">Register on Ethic. We'll validate you as a member shortly after.</p>
-						</div>
-						<div class="step">
-							<div class="step-number" data-sr="enter bottom, move 5px, over 1s">2</div>
-							<p data-sr="enter top, move 50px, over 1s">Call your insurer and raise your deductible to the amount corresponding to <a href="#" title="">your insurance company</a>.</p>
-							<p data-sr="enter top, move 50px, over 1s, wait 0.2s">Beware of raising both collision and comprehensive deductibles. This change will be effective the same day.</p>
-							<div class="step-information">
-								<div class="help" data-sr="enter right, move 50px, over 1s">?</div>
-								<div class="step-content">
-									<p>Different insurance companies offer different deductibles. Make sure to raise yours to the right amount.</p>
-								</div>
-							</div>
-						</div>
-						<div class="step">
-							<div class="step-number" data-sr="enter bottom, move 5px, over 1s">3</div>
-							<p data-sr="enter top, move 50px, over 1s">Register each of your policies on Ethic. You’re all done!</p>
-							<div class="step-information">
-								<div class="help" data-sr="enter right, move 50px, over 1s">?</div>
-								<div class="step-content">
-									<p>For each of your auto policies, you will need your Vehicle Identification Number (VIN)</p></div>
-							</div>
-						</div>
-						<div class="step">
-							<a data-sr="enter bottom, move 50px, over 1s" href="#" class="step-interested js-im-interested">
-								I'm interested
-							</a>
-						</div>
-				</div>
-			</div>
-		</section>
-		<!-- / how it works -->
-		
-		<!-- availability -->
-		{% include "partials/availability.html" %}
-		<!-- / availability -->
-
-		<!-- footer -->
-		<footer class="footer">Copyright &copy; 2015</footer>
-		<!-- / footer -->
-
-		<!-- menu -->
-		{% include "partials/menu.html" %}
-		<!-- / menu -->
-
+{% block content %}
+<!-- hero -->
+<div class="hero">
+	<div class="hero-baseline">
+		<h1 data-sr="enter top, move 10px, over 1s"><strong>How it works</strong></h1>
 	</div>
-	<!-- / page -->
-	<script src="js/build/howitworks.js"></script>
-</body>
-</html>
+</div>
+<!-- / hero -->
+
+<!-- 3 steps -->
+<section class="content">
+	<div class="wrapper">
+		<div class="row">
+			<h2><strong>3 simple steps</strong></h2>
+				<div class="step">
+					<div class="step-number" data-sr="enter bottom, move 5px, over 1s">1</div>
+					<p data-sr="enter top, move 50px, over 1s">Register on Ethic. We'll validate you as a member shortly after.</p>
+				</div>
+				<div class="step">
+					<div class="step-number" data-sr="enter bottom, move 5px, over 1s">2</div>
+					<p data-sr="enter top, move 50px, over 1s">Call your insurer and raise your deductible to the amount corresponding to <a href="#" title="">your insurance company</a>.</p>
+					<p data-sr="enter top, move 50px, over 1s, wait 0.2s">Beware of raising both collision and comprehensive deductibles. This change will be effective the same day.</p>
+					<div class="step-information">
+						<div class="help" data-sr="enter right, move 50px, over 1s">?</div>
+						<div class="step-content">
+							<p>Different insurance companies offer different deductibles. Make sure to raise yours to the right amount.</p>
+						</div>
+					</div>
+				</div>
+				<div class="step">
+					<div class="step-number" data-sr="enter bottom, move 5px, over 1s">3</div>
+					<p data-sr="enter top, move 50px, over 1s">Register each of your policies on Ethic. You’re all done!</p>
+					<div class="step-information">
+						<div class="help" data-sr="enter right, move 50px, over 1s">?</div>
+						<div class="step-content">
+							<p>For each of your auto policies, you will need your Vehicle Identification Number (VIN)</p></div>
+					</div>
+				</div>
+				<div class="step">
+					<a data-sr="enter bottom, move 50px, over 1s" href="#" class="step-interested js-im-interested">
+						I'm interested
+					</a>
+				</div>
+		</div>
+	</div>
+</section>
+<!-- / 3 steps -->
+
+{% block scripts %}
+<script src="js/build/howitworks.js"></script>
+{% endblock %}
