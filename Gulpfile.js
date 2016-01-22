@@ -63,6 +63,7 @@ function bundle(sourceFileName) {
 gulp.task('js', function() {
   bundle('main.js');
   bundle('faq.js');
+  bundle('howitworks.js');
 
   var stream = gulp.src('./public/js/libs/modernizr/modernizr.js');
   if (minifyJs) {
