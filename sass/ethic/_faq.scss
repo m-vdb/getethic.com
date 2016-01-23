@@ -12,7 +12,7 @@
 			margin: 0;
 		}
 		
-		span {
+		.question-link {
 			display: block;
 			cursor: pointer;
 			color: $light-blue;
@@ -81,7 +81,7 @@
 				color: $blue;	
 			}
 			
-			span {
+			.question-link {
 				color: $blue;
 				
 				&:before,
