@@ -12,7 +12,7 @@
 			margin: 0;
 		}
 		
-		span {
+		.question-link {
 			display: block;
 			cursor: pointer;
 			color: $light-blue;
@@ -72,6 +72,20 @@
 			
 			@include opacity(0);
 			@include transition(all .2s);
+
+			span {
+				display: block;
+				margin-bottom: 5px;
+			}
+
+			tr > td {
+				padding-right: 15px;
+			}
+
+			th {
+				text-decoration: underline;
+				padding-bottom: 10px;
+			}
 		}
 		
 		&.expanded {
@@ -81,7 +95,7 @@
 				color: $blue;	
 			}
 			
-			span {
+			.question-link {
 				color: $blue;
 				
 				&:before,

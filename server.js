@@ -40,7 +40,8 @@ app.get('/', csrfProtection, function (req, res) {
 app.get('/faq', csrfProtection, function (req, res) {
   res.render('faq.html', {
     csrfToken: req.csrfToken(),
-    heapId: config.get('heap_id')
+    heapId: config.get('heap_id'),
+    contact: config.get('contact')
   });
 });
 app.get('/how-it-works', csrfProtection, function (req, res) {

@@ -4,5 +4,8 @@
     "options": {}
   },
   "zopim_id": "",
-  "heap_id": ""
+  "heap_id": "",
+  "contact": {
+    "phone": "415-XXX-XXX"
+  }
 }
