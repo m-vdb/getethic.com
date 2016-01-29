@@ -54,6 +54,10 @@
 			margin-bottom: 50px;
 		}
 		
+		p {
+			color: $white;
+		}
+		
 		.btn {
 			text-align: left;	
 			
@@ -83,5 +87,10 @@
 			
 			@include opacity(1);
 		} 
+	}
+
+	p {
+		color: $white;
+		font-size: 20px;
 	}
 }

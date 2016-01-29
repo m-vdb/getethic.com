@@ -14,9 +14,9 @@ var app = express();
 var csrfProtection = csrf({cookie: true});
 
 // configuration
-app.set('views', './views');
-app.set('view engine', 'ejs');
-app.engine('html', require('ejs').renderFile);
+app.set('views', __dirname + '/views');
+app.set('view engine', 'html');
+app.engine('html', require('swig').renderFile);
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 
@@ -31,16 +31,29 @@ app.use(function (req, res, next) {
 
 // routes
 app.get('/', csrfProtection, function (req, res) {
-  res.render('index.html', {csrfToken: req.csrfToken()});
+  res.render('index', {
+    csrfToken: req.csrfToken(),
+    zopimId: config.get('zopim_id'),
+    heapId: config.get('heap_id')
+  });
 });
 app.get('/faq', csrfProtection, function (req, res) {
-  res.render('faq.html', {csrfToken: req.csrfToken()});
+  res.render('faq.html', {
+    csrfToken: req.csrfToken(),
+    heapId: config.get('heap_id'),
+    contact: config.get('contact')
+  });
 });
-app.get('/how-to-get-started', csrfProtection, function (req, res) {
-  res.render('how-to-get-started.html', {csrfToken: req.csrfToken()});
+app.get('/how-it-works', csrfProtection, function (req, res) {
+  res.render('how-it-works.html', {
+    csrfToken: req.csrfToken(),
+    heapId: config.get('heap_id')
+  });
 });
 app.get('/thanks', function (req, res) {
-  res.render('thanks.html');
+  res.render('thanks.html', {
+    heapId: config.get('heap_id')
+  });
 });
 app.post(
   '/register-beta',

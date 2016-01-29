@@ -7,6 +7,7 @@
     "modernizr": "2.6.2",
     "swfobject": "*",
     "scrollreveal": "scroll-reveal#~2.3.2",
-    "placeholders": "~4.0.1"
+    "placeholders": "~4.0.1",
+    "fastclick": "~1.0.6"
   }
 }

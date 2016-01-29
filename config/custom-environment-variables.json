@@ -5,5 +5,10 @@
       "user": "MONGO_USER",
       "pass": "MONGO_PASSWORD"
     }
+  },
+  "zopim_id": "ZOPIM_ID",
+  "heap_id": "HEAP_ID",
+  "contact": {
+    "phone": "CONTACT_PHONE"
   }
 }

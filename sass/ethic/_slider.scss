@@ -7,17 +7,25 @@
 	padding: 10px 0;
 	margin: 30px auto;
 	width: 200px;
+	cursor: pointer;
 	
 	@include border-radius(40px);
 	
 	@include transition(all .2s);
-	
+
+	@include for-desktop-and-up {
+		&:hover {
+			.handle {
+				background-color: $blue;
+			}
+		}
+	}
+
 	.handle {
 		display: block;
 		position: absolute;
 		background-color: $white;
 		border: 2px solid $blue;
-		cursor: pointer;
 		top: 2px;
 		left: 2px;
 		margin-left: 0;

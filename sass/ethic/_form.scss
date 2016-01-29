@@ -32,16 +32,42 @@ fieldset {
 	}
 }
 
+label {
+	z-index: 2;
+	position: absolute;
+	color: $white;
+	text-transform: uppercase;
+	font-family: $font-bold;
+	font-size: 16px;
+	left: 5%;
+	top: 30%;
+	margin-top: -(22px/2);
+	pointer-events: none;
+	
+	@include transition(all .2s);
+	
+	@include for-tablet-and-up {
+		top: 50%;
+	}
+}
+
+input[type="email"].input--filled + label {
+	top: 20%;
+	font-size: 11px;
+	
+	@include for-tablet-and-up {
+		top: 35%;
+	}
+}
+
 input[type="email"] {
 	display: inline-block;
 	background-color: $mid-blue;
 	border: 0;
 	color: $white;
 	text-transform: uppercase;
-	text-align: center;
-	font-family: $font-bold;
 	vertical-align: top;
-	padding: 6%;
+	padding: 8% 6% 4% 6%;
 	margin: 1% auto;
 	width: 88%;
 	
@@ -49,9 +75,8 @@ input[type="email"] {
 	@include border-radius(0);
 	
 	@include for-tablet-and-up {
-		text-align: left;
 		margin: auto;
-		padding: 20px;
+		padding: 30px 20px 10px 20px;
 		width: 269px;
 	}
 }
