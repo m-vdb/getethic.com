@@ -74,7 +74,9 @@ app.post(
 });
 
 // start services
-// mongoose.connect(config.get('mongo.uri'), config.get('mongo.options'));
+if (config.get('mongo.uri')) {
+  mongoose.connect(config.get('mongo.uri'), config.get('mongo.options'));
+}
 app.listen(PORT, '0.0.0.0', function () {
   console.log("Server listening on: http://localhost:%s", PORT);
 });
