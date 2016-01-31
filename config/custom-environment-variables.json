@@ -8,6 +8,7 @@
   },
   "zopim_id": "ZOPIM_ID",
   "heap_id": "HEAP_ID",
+  "google_tag_manager_id": "GOOGLE_TAG_MANAGER_ID",
   "contact": {
     "phone": "CONTACT_PHONE"
   }
