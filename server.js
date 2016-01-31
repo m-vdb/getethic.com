@@ -34,25 +34,29 @@ app.get('/', csrfProtection, function (req, res) {
   res.render('index', {
     csrfToken: req.csrfToken(),
     zopimId: config.get('zopim_id'),
-    heapId: config.get('heap_id')
+    heapId: config.get('heap_id'),
+    gtmId: config.get('google_tag_manager_id')
   });
 });
 app.get('/faq', csrfProtection, function (req, res) {
   res.render('faq.html', {
     csrfToken: req.csrfToken(),
     heapId: config.get('heap_id'),
+    gtmId: config.get('google_tag_manager_id'),
     contact: config.get('contact')
   });
 });
 app.get('/how-it-works', csrfProtection, function (req, res) {
   res.render('how-it-works.html', {
     csrfToken: req.csrfToken(),
-    heapId: config.get('heap_id')
+    heapId: config.get('heap_id'),
+    gtmId: config.get('google_tag_manager_id')
   });
 });
 app.get('/thanks', function (req, res) {
   res.render('thanks.html', {
-    heapId: config.get('heap_id')
+    heapId: config.get('heap_id'),
+    gtmId: config.get('google_tag_manager_id')
   });
 });
 app.post(
