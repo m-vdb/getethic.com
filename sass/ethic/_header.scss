@@ -63,3 +63,15 @@
 		}
 	}
 }
+
+.call {
+	position: absolute;
+	text-decoration: none;
+	color: $white;
+	right: 100px;
+	top: 37px;
+	
+	.sticky & {
+		color: $light-blue;
+	}
+}
