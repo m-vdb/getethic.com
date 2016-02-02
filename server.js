@@ -18,7 +18,9 @@ var csrfProtection = csrf({cookie: true});
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
 app.set('view cache', false);
-swig.setDefaults({cache: (process.env.NODE_ENV === 'production')});
+if (process.env.NODE_ENV !== 'production') {
+  swig.setDefaults({cache: false});
+}
 app.engine('html', swig.renderFile);
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
