@@ -5,8 +5,11 @@
 @import "ethic/vars";
 @import "ethic/base";
 
+html,
 body {
-	@extend %body;
+  overflow-x:hidden;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 img {
