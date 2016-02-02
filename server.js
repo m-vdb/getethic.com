@@ -4,7 +4,8 @@ var express = require('express'),
     cookieParser = require('cookie-parser'),
     csrf = require('csurf'),
     mongoose = require('mongoose'),
-    config = require('config');
+    config = require('config'),
+    swig = require('swig');
 
 var BetaUser = require('./models/beta-user.js');
 
@@ -16,7 +17,9 @@ var csrfProtection = csrf({cookie: true});
 // configuration
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
-app.engine('html', require('swig').renderFile);
+app.set('view cache', false);
+swig.setDefaults({cache: (process.env.NODE_ENV === 'production')});
+app.engine('html', swig.renderFile);
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 
