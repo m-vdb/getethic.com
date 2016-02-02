@@ -1,19 +1,38 @@
 .footer {
 	background-color: $mid-blue;
-	text-align: center;
-	font-size: 11px;
+	font-size: 0;
 	color: $white;
-	padding: 20px 0;
+	padding: 40px 0;
 
   .copyright {
-    float: left;
-    margin-left: 10px;
-    width: 100px;
     display: inline-block;
+    font-size: 11px;
+    padding-left: 2%;
+    width: 48%;
   }
 
   .love {
-    margin-left: -110px;
+    position: relative;
     display: inline-block;
+    font-size: 11px;
+    text-align: right;
+    padding-right: 2%;
+    width: 48%;
+    
+    span {
+      position: absolute;
+      top: -8%;
+      
+      @include animation('heart 1s infinite');
+
+      @include keyframes(heart) {
+        0% { font-size: 11px; }
+        10% { font-size: 14px; }
+        20% { font-size: 11px; }
+        30% { font-size: 14px; }
+        40% { font-size: 11px; }
+        100% { font-size: 11px;}
+      }
+    }
   }
 }

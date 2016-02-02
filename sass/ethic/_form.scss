@@ -13,6 +13,7 @@
 }
 
 form {
+	font-size: 0;
 	margin: auto;
 	
 	@include for-tablet-and-up {
@@ -40,7 +41,7 @@ label {
 	font-family: $font-bold;
 	font-size: 16px;
 	left: 5%;
-	top: 30%;
+	top: 55%;
 	margin-top: -(22px/2);
 	pointer-events: none;
 	
@@ -52,12 +53,8 @@ label {
 }
 
 input[type="email"].input--filled + label {
-	top: 20%;
+	top: 35%;
 	font-size: 11px;
-	
-	@include for-tablet-and-up {
-		top: 35%;
-	}
 }
 
 input[type="email"] {
@@ -66,30 +63,28 @@ input[type="email"] {
 	border: 0;
 	color: $white;
 	text-transform: uppercase;
+	font-size: 11px;
 	vertical-align: top;
-	padding: 8% 6% 4% 6%;
-	margin: 1% auto;
-	width: 88%;
+	padding: 10% 5% 4% 5%;
+	width: 70%;
 	
 	@include placeholder {color: $white;}
 	@include border-radius(0);
 	
 	@include for-tablet-and-up {
-		margin: auto;
 		padding: 30px 20px 10px 20px;
 		width: 269px;
 	}
 }
 
 button {
-	display: block;
+	display: inline-block;
 	background-color: $mid-blue;
-	padding: 6%;
-	width: 100%;
+	border-left: 1px solid $blue !important;
+	padding: 7%;
+	width: 20%;
 	
 	@include for-tablet-and-up {
-		display: inline-block;
-		border-left: 1px solid $blue !important;
 		padding: 24px 30px;
 		width: auto;
 	}
@@ -108,8 +103,13 @@ button {
 		display: block;
 		background: url(../img/svg/arrow-white.svg);
 		margin: auto;
-		height: 15px;
-		width: 15px;
+		height: 14px;
+		width: 14px;
+		
+		@include for-tablet-and-up {
+			height: 15px;
+			width: 15px;
+		}
 	}
 	
 }
