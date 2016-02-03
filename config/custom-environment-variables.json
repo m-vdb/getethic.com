@@ -11,5 +11,6 @@
   "google_tag_manager_id": "GOOGLE_TAG_MANAGER_ID",
   "contact": {
     "phone": "CONTACT_PHONE"
-  }
+  },
+  "cache_version": "CACHE_VERSION"
 }

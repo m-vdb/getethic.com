@@ -40,7 +40,8 @@ app.get('/', csrfProtection, function (req, res) {
     csrfToken: req.csrfToken(),
     zopimId: config.get('zopim_id'),
     heapId: config.get('heap_id'),
-    gtmId: config.get('google_tag_manager_id')
+    gtmId: config.get('google_tag_manager_id'),
+    cacheVersion: config.get('cache_version')
   });
 });
 app.get('/faq', csrfProtection, function (req, res) {
