@@ -23,15 +23,15 @@
 
 		strong {
 			display:block;
-      background: url(../img/svg/logo-blue.svg);
+      background: url(../img/svg/logo.svg);
       height: 30px;
       width: 60px;
       
 			@include hide-text;
 			
-			.home & {
-				background: url(../img/svg/logo.svg);
-			}
+			// .home & {
+			// 	background: url(../img/svg/logo.svg);
+			// }
 			
 			.sticky & {
 				background: url(../img/svg/logo-blue.svg);
