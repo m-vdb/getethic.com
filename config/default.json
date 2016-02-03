@@ -9,5 +9,9 @@
   "contact": {
     "phone": "415-XXX-XXX"
   },
-  "cache_version": "1"
+  "cache_version": "1",
+  "mailgun": {
+      "api_key": "",
+      "domain": ""
+  }
 }
