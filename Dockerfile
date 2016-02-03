@@ -2,7 +2,7 @@ FROM node:4.2
 MAINTAINER m-vdb
 
 ENV MINIFY_JS=1
-ENV CACHE_VERSION=`date +"%s"`
+ENV CACHE_VERSION=$(date +"%s")
 
 # install ruby and compass
 RUN apt-get update
