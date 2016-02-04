@@ -7,7 +7,7 @@ var express = require('express'),
     config = require('config'),
     swig = require('swig');
 
-var BetaUser = require('./models/beta-user.js'),
+var BetaUser = require('./models.js').BetaUser,
     tags = require('./tags.js'),
     mailer = require('./mail.js');
 

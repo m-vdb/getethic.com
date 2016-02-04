@@ -9,4 +9,6 @@ var betaUserSchema = new mongoose.Schema({
 });
 
 
-module.exports = mongoose.model('BetaUser', betaUserSchema);
+module.exports = {
+  BetaUser: mongoose.model('BetaUser', betaUserSchema)
+};
