@@ -1,0 +1,19 @@
+%visible-for-desktop-and-up {
+	@include for-mobile-and-up {
+		display: none;
+	}
+	
+	@include for-desktop-and-up {
+		display: block;
+	}
+}
+
+%hidden-for-desktop-and-up {
+	@include for-mobile-and-up {
+		display: block;
+	}
+	
+	@include for-desktop-and-up {
+		display: none;
+	}
+}

@@ -1,4 +1,4 @@
-@import "fonts", "animations";
+@import "fonts", "animations", "mixin";
 
 body {
 	background-color:$white;
@@ -26,11 +26,7 @@ a {
 h1 {
 	text-align: center;
 	font-size: 30px;
-	color: $light-blue;
-	
-	.home & {
-		color: $white;
-	}
+	color: $white;
 	
 	@include for-tablet-and-up {
 		font-size: 40px;

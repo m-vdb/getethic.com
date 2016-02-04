@@ -23,15 +23,15 @@
 
 		strong {
 			display:block;
-      background: url(../img/svg/logo-blue.svg);
+      background: url(../img/svg/logo.svg);
       height: 30px;
       width: 60px;
       
 			@include hide-text;
 			
-			.home & {
-				background: url(../img/svg/logo.svg);
-			}
+			// .home & {
+			// 	background: url(../img/svg/logo.svg);
+			// }
 			
 			.sticky & {
 				background: url(../img/svg/logo-blue.svg);
@@ -66,12 +66,35 @@
 
 .call {
 	position: absolute;
+	background-color: $mid-blue;
 	text-decoration: none;
 	color: $white;
 	right: 100px;
-	top: 37px;
+	top: 30px;
+	padding: 10px;
+	
+	@include border-radius(30px);
 	
 	.sticky & {
 		color: $light-blue;
+	}
+	
+	@include for-desktop-and-up {
+		background-color: transparent;
+		top: 37px;
+		padding: 0;
+	}
+	
+	span {
+		@extend %visible-for-desktop-and-up;
+	}
+	
+	.icon-call {
+		display: block;
+		background: url(../img/svg/call.svg) no-repeat;
+    height: 20px;
+    width: 20px;
+    
+    @extend %hidden-for-desktop-and-up;
 	}
 }
