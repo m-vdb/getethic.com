@@ -7,7 +7,8 @@
   "heap_id": "",
   "google_tag_manager_id": "",
   "contact": {
-    "phone": "415-XXX-XXXX"
+    "phone": "415-XXX-XXXX",
+    "noReply": "Ethic <no-reply@getethic.com>"
   },
   "cache_version": "1",
   "mailgun": {
