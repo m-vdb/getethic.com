@@ -36,6 +36,7 @@ app.use(function (req, res, next) {
   res.locals.path = req.path;
   next();
 });
+swig.setDefaults({loader: swig.loaders.fs(__dirname + '/../views')});
 
 // routes
 app.get('/', csrfProtection, function (req, res) {
