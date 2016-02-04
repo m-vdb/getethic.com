@@ -12,5 +12,9 @@
   "contact": {
     "phone": "CONTACT_PHONE"
   },
-  "cache_version": "CACHE_VERSION"
+  "cache_version": "CACHE_VERSION",
+  "mailgun": {
+      "api_key": "MAILGUN_API_KEY",
+      "domain": "MAILGUN_DOMAIN"
+  }
 }
