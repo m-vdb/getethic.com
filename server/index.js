@@ -8,7 +8,8 @@ var express = require('express'),
     swig = require('swig');
 
 var BetaUser = require('./models/beta-user.js'),
-    tags = require('./tags.js');
+    tags = require('./tags.js'),
+    mailer = require('./mail.js');
 
 const PORT = 8080;
 
@@ -84,7 +85,22 @@ app.post(
   } else {
     var user = new BetaUser(req.form);
     user.save(function (err) {
-      res.redirect(err ? '/#error' : '/thanks');
+      if (err) return res.redirect('/#error');
+
+      // send mail to the user
+      mailer.sendFromTemplate(
+        config.get('contact.noReply'), user.email,
+        'Welcome!', 'mail/thank-you.html', {},
+        function (err) {
+          var redirect = function () {
+            res.redirect('/thanks');
+          };
+          if (err) return redirect();
+
+          user.mailSent = true;
+          user.save(redirect);
+        }
+      );
     });
   }
 });
