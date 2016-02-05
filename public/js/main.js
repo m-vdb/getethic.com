@@ -1,4 +1,4 @@
-require('jquery');
+window.$ = window.jQuery = require('jquery');
 require('swfobject');
 require('placeholders');
 
