@@ -81,11 +81,11 @@ app.post(
   // handler
   function (req, res) {
   if (!req.form.isValid) {
-    res.redirect('/#error');
+    res.redirect('/#error-validation');
   } else {
     var user = new BetaUser(req.form);
     user.save(function (err) {
-      if (err) return res.redirect('/#error');
+      if (err) return res.redirect('/#error-dup');
 
       // send mail to the user
       mailer.sendFromTemplate(
