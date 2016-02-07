@@ -1,27 +1,47 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-  <head>
-    <meta charset="utf-8">
-  </head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width"/>
 
-  <body>
-    <table cellpadding="0" cellspacing="0" border="0">
-      <tr>
-        <td>
-          <h2>Thank you!</h2>
-          <p class="normal-space">
-            Some text here <a href="www.github.com">Some link</a>
-          </p>
-          <p>
-            Some other paragraph.
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Other stuff here!</p>
-        </td>
-      </tr>
-    </table>
-  </body>
+  <style type="text/css">
+    {% include "mail/mail.css" %}
+  </style>
+</head>
+<body>
+  <table class="body-wrap">
+    <tr>
+      <td class="container">
+        <table>
+          <tr>
+            <td align="center" class="masthead">
+
+              <h1>Thank you for joining <img class="logo" src="{{ baseDomain }}/img/mail/logo.png" alt="Ethic"/></h1>
+
+            </td>
+          </tr>
+          <tr>
+            <td class="content">
+
+              <h2>Hi there,</h2>
+
+              <p>
+                We're so glad to have you on board!
+                We're polishing the last details of our platform and will launch it very soon.
+                Stay tuned!
+              </p>
+              <p>
+                In the meantime, don't forget to check out our <a href="#">blog</a>.
+              </p>
+              <p><em>Ethic team</em></p>
+
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+  <!-- Unsubscribe link is added by mailgun -->
+</body>
 </html>

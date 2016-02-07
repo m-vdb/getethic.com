@@ -13,5 +13,6 @@
   "mailgun": {
       "api_key": "",
       "domain": ""
-  }
+  },
+  "baseDomain": ""
 }
