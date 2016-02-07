@@ -33,29 +33,6 @@ a {
   text-decoration: none;
 }
 
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-left {
-  text-align: left;
-}
-
-// Button
-.button {
-  display: inline-block;
-  color: $white;
-  background: $blue;
-  border: solid $blue;
-  border-width: 10px 20px 8px;
-  font-weight: bold;
-  border-radius: 4px;
-}
-
 // Typography
 h1, h2 {
   margin-bottom: 20px;
