@@ -9,6 +9,8 @@ var config = require('config'),
 
 
 module.exports.sendFromTemplate = function (from, to, subject, tpl, context, cb) {
+  context = context || {};
+  context.baseDomain = config.get('baseDomain');
   var html = swig.renderFile(tpl, context),
       mail = mailcomposer({
         from: from,
