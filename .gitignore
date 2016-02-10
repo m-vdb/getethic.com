@@ -7,3 +7,5 @@ public/css/*
 public/js/libs/*
 public/js/build/*
 !public/js/build/.keep
+
+.DS_Store

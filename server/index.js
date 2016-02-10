@@ -104,6 +104,12 @@ app.post(
     });
   }
 });
+if (process.env.NODE_ENV !== 'production') {
+  var juice = require('juice');
+  app.get('/thanks-email', function (req, res) {
+    res.send(juice(swig.renderFile('mail/thank-you.html')));
+  });
+}
 
 // start services
 if (config.get('mongo.uri')) {
