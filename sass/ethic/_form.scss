@@ -66,6 +66,7 @@ input[type="email"] {
 	font-size: 11px;
 	vertical-align: top;
 	padding: 10% 5% 4% 5%;
+	height: 14px;
 	width: 70%;
 	
 	@include placeholder {color: $white;}
