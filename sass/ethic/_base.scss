@@ -83,6 +83,10 @@ p {
 	line-height: 25px;
 	
 	@include word-wrap;
+
+	&.text-justify {
+		text-align: justify;
+	}
 }
 
 .page {
