@@ -4,7 +4,7 @@ body {
 	background-color:$white;
 	font-family:$font-light, Arial;
 	font-size: $base-font-size;
-	color:$light-blue;
+	color:$black;
 	min-width:320px;
 	
 	@include font-smoothing;
@@ -83,6 +83,10 @@ p {
 	line-height: 25px;
 	
 	@include word-wrap;
+
+	&.text-justify {
+		text-align: justify;
+	}
 }
 
 .page {
@@ -94,10 +98,6 @@ p {
 	
 	@include clearfix;
 
-	// @include for-mobile-only {
-	// 	min-width:320px;
-	// }
-	
 	@include for-desktop-and-up {
 		@include transition(all 1s $ease-out-quint);
 	}

@@ -6,12 +6,12 @@ require('placeholders');
 require('./Ethic/scroll.js');
 var UI = require('./Ethic/UI.js');
 var nav = require('./Ethic/nav.js');
-var howitworks = require('./Ethic/howitworks.js');
+var joining = require('./Ethic/joining.js');
 var click = require('./Ethic/click.js');
 
 $("document").ready(function() {
   UI.init();
   nav.init();
-  howitworks.init();
+  joining.init();
   click.init();
 });

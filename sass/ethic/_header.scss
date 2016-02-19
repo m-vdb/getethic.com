@@ -28,11 +28,7 @@
       width: 60px;
       
 			@include hide-text;
-			
-			// .home & {
-			// 	background: url(../img/svg/logo.svg);
-			// }
-			
+
 			.sticky & {
 				background: url(../img/svg/logo-blue.svg);
 			}
@@ -76,7 +72,7 @@
 	@include border-radius(30px);
 	
 	.sticky & {
-		color: $light-blue;
+		color: $black;
 	}
 	
 	@include for-desktop-and-up {

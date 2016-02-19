@@ -31,7 +31,7 @@
 </div>
 <!-- / mutual coverage -->
 
-<!-- how it works -->
+<!-- the concept -->
 <section class="content">
 	<div class="wrapper">
 		<div class="row">
@@ -40,17 +40,21 @@
 		</div>
 	</div>
 </section>
-<!-- / how it works -->
+<!-- / the concept -->
 		
 <!-- claims -->
 <section class="content">
 	<div class="claims">
-		<div class="small"><img src="{% static "img/svg/small-claims.svg" %}" alt="Small Claims" /></div>
-		<div class="large"><img src="{% static "img/svg/large-claims.svg" %}" alt="Large Claims" /></div>
+		<div class="small"><img src="{% static "img/svg/small-claims.svg" %}" alt="Small Damage" /></div>
+		<div class="large"><img src="{% static "img/svg/large-claims.svg" %}" alt="Considerable Damage" /></div>
 		<div class="slider">
 			<div class="handle"></div>
-			<span class="slider-small">Small Claims</span>
-			<span class="slider-large">Large Claims</span>
+			<span class="slider-small">Small Damage</span>
+			<span class="slider-large">Considerable Damage</span>
+		</div>
+		<div class="slider-help">
+			<span class="slider-help-small">Your cost of repair does not exceed a couple of thousands dollars.</span>
+			<span class="slider-help-large">Your cost of repair is significant.</span>
 		</div>
 	</div>
 </section>
@@ -64,17 +68,17 @@
 			<div class="col-3" data-sr="enter top, move 50px, over 1s">
 				<img src="{% static "img/svg/lower.svg" %}" alt="Lower premiums" />
 				<h3><strong>Lower premiums</strong></h3>
-				<p>By joining Ethic, you pay considerably less in premiums each month to your insurer. The only thing you pay on Ethic is a contribution to others' claims. Nothing else.</p>
+				<p class="text-justify">By joining Ethic, you pay considerably less in premiums each month to your insurer. The only thing you pay on Ethic is a contribution to others' claims. Nothing else.</p>
 			</div>
 			<div class="col-3" data-sr="enter top, move 50px, over 1s, wait 0.2s">
 				<img src="{% static "img/svg/coverage.svg" %}" alt="Unchanged coverage" />
 				<h3><strong>Unchanged coverage</strong></h3>
-				<p>In the unwanted case you would have a claim, Ethic members will cover it up to a certain amount. If it is a large claim, your insurer will kick in and cover the rest.</p>
+				<p class="text-justify">In the unwanted case you would have a claim, Ethic members will cover it up to a certain amount. If it is a large claim, your insurer will kick in and cover the rest.</p>
 			</div>
 			<div class="col-3" data-sr="enter top, move 50px, over 1s, wait 0.4s">
 				<img src="{% static "img/svg/better.svg" %}" alt="Better claim experience" />
 				<h3><strong>Better claim experience</strong></h3>
-				<p>Small claims require flexibility. You shouldn't have to go through a cumbersome process. Claims are reviewed by our qualified, independant and unbiased partners.</p>
+				<p class="text-justify">Small claims require flexibility. You shouldn't have to go through a cumbersome process. Claims are reviewed by our qualified, independant and unbiased partners.</p>
 			</div>
 		</div>
 	</div>
@@ -116,11 +120,15 @@
 </section>
 <!-- / a new approach -->
 
-<!-- see for yourself -->
+<!-- success stories -->
 <section class="content">
 	<div class="wrapper">
 		<div class="row">
-			<h2><strong>We're compatible with your insurer</strong></h1>
+			<h2><strong>Make tremendous savings</strong></h1>
+			<p>
+				Whatever your profile is, the car model you own and the insurer you chose,
+				you'll save money every year with Ethic.
+			</p>
 			<div class="profil">
 				<div class="profil-picture">
 					<img src="{% static "img/profil/profil-1.jpg" %}" alt="profil-1" />
@@ -177,7 +185,7 @@
 		</div>
 	</div>
 </section>
-<!-- / see for yourself -->
+<!-- / success stories -->
 {% endblock %}
 
 {% block scripts %}
