@@ -4,7 +4,7 @@ body {
 	background-color:$white;
 	font-family:$font-light, Arial;
 	font-size: $base-font-size;
-	color:$light-blue;
+	color:$black;
 	min-width:320px;
 	
 	@include font-smoothing;

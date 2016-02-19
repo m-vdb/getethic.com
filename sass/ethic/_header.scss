@@ -72,7 +72,7 @@
 	@include border-radius(30px);
 	
 	.sticky & {
-		color: $light-blue;
+		color: $black;
 	}
 	
 	@include for-desktop-and-up {

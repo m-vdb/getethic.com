@@ -15,7 +15,7 @@
 		.question-link {
 			display: block;
 			cursor: pointer;
-			color: $light-blue;
+			color: $black;
 			margin: 0 20px 0 0;
 			
 			@include transition(height .2s $ease-out-quint);
@@ -32,7 +32,7 @@
 			&:before {
 				display: block;
 				position: absolute;
-				background-color: $light-blue;
+				background-color: $black;
 				content: '';
 				top: 30px;
 				// margin-top: -(5px/2);
