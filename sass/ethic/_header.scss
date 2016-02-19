@@ -28,11 +28,7 @@
       width: 60px;
       
 			@include hide-text;
-			
-			// .home & {
-			// 	background: url(../img/svg/logo.svg);
-			// }
-			
+
 			.sticky & {
 				background: url(../img/svg/logo-blue.svg);
 			}

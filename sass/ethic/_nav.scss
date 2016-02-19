@@ -98,14 +98,10 @@
 	background-color: $white;
 	margin: 4px auto;
 	height: 1px;
-	
+
 	@include opacity(1);
 	@include transition(all .2s);
-	
-	// .home & {
-	// 	background-color: $white;
-	// }
-	
+
 	.sticky & {
 		background-color: $light-blue;
 	}

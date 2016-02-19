@@ -98,10 +98,6 @@ p {
 	
 	@include clearfix;
 
-	// @include for-mobile-only {
-	// 	min-width:320px;
-	// }
-	
 	@include for-desktop-and-up {
 		@include transition(all 1s $ease-out-quint);
 	}
