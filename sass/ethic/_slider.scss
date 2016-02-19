@@ -6,7 +6,7 @@
 	color: $blue;
 	padding: 10px 0;
 	margin: 30px auto;
-	width: 200px;
+	width: 255px;
 	cursor: pointer;
 	
 	@include border-radius(40px);
@@ -51,10 +51,10 @@
 		
 		.handle {
 			border: 2px solid $white;
-			margin-left: 161px;	
+			margin-left: 217px;
 			
 			@include for-desktop-and-up {
-				margin-left: 157px;
+				margin-left: 214px;
 			}
 		}
 		
@@ -78,5 +78,27 @@
 	
 	.slider-large {
 		display: none;
+	}
+}
+
+.slider-help {
+	text-align: center;
+	font-size: 13px;
+	font-family: $font-italic;
+
+	.slider-help-small {
+		display: inherit;
+	}
+	.slider-help-large {
+		display: none;
+	}
+
+	.active & {
+		.slider-help-small {
+			display: none;
+		}
+		.slider-help-large {
+			display: inherit;
+		}
 	}
 }
