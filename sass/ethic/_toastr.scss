@@ -1,0 +1,50 @@
+.toast-title {
+  font-weight: bold;
+}
+
+#toast-container {
+  z-index: 999999;
+  position: fixed;
+  pointer-events: none;
+  top: 120px;
+  width: 100%;
+  
+  @include for-tablet-and-up {
+    right: 12px;
+    width: auto;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#toast-container * {
+  box-sizing : border-box;
+}
+
+#toast-container > div {
+  position: relative;
+  display: block;
+  pointer-events: auto;
+  color: $white;
+  overflow: hidden;
+  margin: 4%;
+  padding: 4%;
+  
+  @include border-radius(2px);
+  
+  @include for-tablet-and-up {
+    padding: 15px;
+    margin: 0 0 6px;
+    width: 300px;  
+  }
+}
+
+.toast-error {
+  background-color: $error;
+}
+
+.toast-info {
+  background-color: $mid-blue;
+}
