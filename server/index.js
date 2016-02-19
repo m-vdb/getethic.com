@@ -57,8 +57,8 @@ app.get('/faq', csrfProtection, function (req, res) {
     contact: config.get('contact')
   });
 });
-app.get('/how-it-works', csrfProtection, function (req, res) {
-  res.render('how-it-works.html', {
+app.get('/joining', csrfProtection, function (req, res) {
+  res.render('joining.html', {
     csrfToken: req.csrfToken(),
     heapId: config.get('heap_id'),
     gtmId: config.get('google_tag_manager_id'),

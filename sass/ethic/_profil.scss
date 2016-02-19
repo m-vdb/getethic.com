@@ -64,7 +64,7 @@
 		&:before {
 			position: absolute;
 			display: block;
-			background-color: $light-blue;
+			background-color: $gray-gray;
 			content: '';
 			top: 50%;
 			height: 1px;
@@ -74,7 +74,7 @@
 		&:after {
 			position: absolute;
 			background-color: $white;
-			border: 2px solid $light-blue;
+			border: 2px solid $gray-gray;
 			content: '';
 			top: 50%;
 			margin-top: -(14px/2);
