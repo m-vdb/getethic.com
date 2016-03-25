@@ -90,7 +90,7 @@ app.post(
       // send mail to the user
       mailer.sendFromTemplate(
         config.get('contact.noReply'), user.email,
-        'Welcome!', 'mail/thank-you.html', {},
+        'Welcome!', 'mail/thank-you.html', {contact: config.get('contact')},
         function (err) {
           var redirect = function () {
             res.redirect('/thanks');
