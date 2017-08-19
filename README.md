@@ -7,6 +7,12 @@ and directly cover each other’s small claims. Each member’s carrier
 only steps in for larger claims. Consumers will lower their premiums by
 buying less coverage from their carrier without carrying any more risk.
 
+Ethic project is divided in several parts:
+
+- a [Web app](https://github.com/m-vdb/ethic-app)
+- a [Web API](https://github.com/m-vdb/ethic-backend)
+- an [Ethereum contract](https://github.com/m-vdb/ethic-contracts)
+
 This repository contains the source code for our product website:
 
 ![Landing page](/screenshots/website-0.png?raw=true "Landing page")
